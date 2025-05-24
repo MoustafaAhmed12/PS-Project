@@ -1,549 +1,203 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <title>PS - للمنشأت المعدنية</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="imgs/logo.png" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Power Steel Home - للمنشأت المعدنية</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Favicon -->
+  <link href="imgs/logo.png" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link href="css/bootstrap.rtl.min.css" rel="stylesheet" /> -->
 
-    <!-- i18next -->
-    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
 
-    <style>
-      .testimonial-carousel,
-      .owl-carousel,
-      .owl-stage-outer {
-        direction: rtl;
-        position: relative;
-        width: 100%;
-        min-height: 320px; /* أو حسب ارتفاع العنصر المطلوب */
-        display: block !important;
-      }
+  <!-- i18next -->
+  <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+</head>
 
-      .owl-carousel .owl-item {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-      }
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+  <!-- Spinner End -->
 
-      .testimonial-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* تأثير hover احترافي على كروت خياراتك الأفضل */
-      .best-choice-card {
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.04);
-        transition: box-shadow 0.35s cubic-bezier(0.4, 2, 0.6, 1),
-          transform 0.35s cubic-bezier(0.4, 2, 0.6, 1);
-        will-change: box-shadow, transform;
-        overflow: visible;
-        padding-bottom: 24px;
-      }
-      .best-choice-card:hover {
-        box-shadow: 0 8px 32px 0 #ffc30c55, 0 1.5px 8px 0 #ff980055;
-        transform: translateY(-8px) scale(1.035);
-        z-index: 2;
-      }
-      /* تأثير hover احترافي على كروت مميزات الشركة */
-      .feature-card {
-        background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.04);
-        transition: box-shadow 0.3s cubic-bezier(0.4, 2, 0.6, 1),
-          transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
-        will-change: box-shadow, transform;
-        padding: 18px 10px 10px 10px;
-        margin-bottom: 0;
-        cursor: pointer;
-      }
-      .feature-card:hover {
-        box-shadow: 0 8px 24px 0 #ffc30c44, 0 1.5px 8px 0 #ff980044;
-        transform: translateY(-6px) scale(1.045);
-        z-index: 2;
-      }
-      /* إضافة هذه الأنماط في قسم الـ style في الـ head */
-      @media (max-width: 768px) {
-        .about-section-header {
-          flex-direction: column;
-          gap: 1rem;
-          text-align: center;
-        }
-        .about-section-header .btn {
-          width: 100%;
-        }
-        .about-feature-card {
-          padding: 0.5rem;
-        }
-        .about-feature-card i {
-          font-size: 1.5rem !important;
-        }
-        .about-feature-card span {
-          font-size: 0.9rem;
-        }
-        .accordion-button {
-          font-size: 0.9rem;
-          padding: 0.75rem;
-        }
-        .accordion-body {
-          font-size: 0.9rem;
-          padding: 0.75rem;
-        }
-      }
-      .filter-btn {
-        border: 2px solid var(--secondary);
-        background: #fff;
-        color: var(--secondary);
-        font-weight: bold;
-        transition: background 0.2s, color 0.2s;
-      }
-      .filter-btn.active,
-      .filter-btn.btn-warning.active,
-      .filter-btn.btn-warning {
-        background: var(--secondary) !important;
-        color: #fff !important;
-        border-color: var(--secondary) !important;
-        opacity: 1 !important;
-      }
-      .filter-btn.btn-outline-warning {
-        background: #fff !important;
-        color: var(--secondary) !important;
-        border-color: var(--secondary) !important;
-        opacity: 1 !important;
-      }
-      .filter-btn:focus {
-        box-shadow: 0 0 0 2px var(--secondary) 44;
-      }
-
-
-      /* RTL/LTR Transition */
-      [dir="rtl"] {
-        transition: all 0.3s ease;
-      }
-
-      [dir="ltr"] {
-        transition: all 0.3s ease;
-      }
-
-      /* Font Family for English */
-      [lang="en"] {
-        font-family: "Poppins", sans-serif;
-      }
-
-      /* Font Family for Arabic */
-      [lang="ar"] {
-        font-family: "Cairo", sans-serif;
-      }
-
-      /* إضافة هذه الأنماط في قسم الـ style */
-      [dir="rtl"] [data-i18n-dir="text"] {
-        text-align: right;
-      }
-
-      [dir="ltr"] [data-i18n-dir="text"] {
-        text-align: left;
-      }
-
-      [dir="rtl"] .text-start {
-        text-align: left !important;
-      }
-      [dir="ltr"] .text-start {
-        text-align: right !important;
-      }
-
-      [dir="rtl"] .me-2 {
-        margin-left: 0 !important;
-        margin-right: 0.5rem !important;
-      }
-
-      [dir="ltr"] .ms-2 {
-        margin-right: 0.5rem !important;
-        margin-left: 0 !important;
-      }
-
-      [dir="rtl"] .border-end {
-        border-left: none !important;
-        border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
-      }
-
-      [dir="ltr"] .border-start {
-        border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
-        border-left: none !important;
-      }
-
-      [dir="rtl"] .border-start {
-        border-right: none !important;
-        border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
-      }
-
-      [dir="ltr"] .border-end {
-        border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
-        border-right: none !important;
-      }
-
-      /* تحديث أنماط الكاروسيل */
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 2rem;
-        padding-top: 10rem;
-
-        border-radius: 6px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      .carousel-item {
-        height: 100vh;
-        min-height: 600px;
-      }
-
-      .carousel-item img {
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.7);
-      }
-
-      .carousel-caption p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-      }
-
-      .carousel-caption .btn {
-        font-size: 1.1rem;
-        padding: 1rem 2.5rem;
-        border-radius: 6px;
-        text-transform: uppercase;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        background-color: var(--secondary);
-      }
-
-      .carousel-caption .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 5%;
-        opacity: 0.8;
-      }
-
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 3rem;
-        height: 3rem;
-        color: var(--secondary) !important;
-        border-radius: 50%;
-        background-size: 50%;
-      }
-
-      @media (max-width: 768px) {
-        .carousel-control-prev,
-        .carousel-control-next {
-          display: none;
-        }
-        .carousel-caption {
-          padding-top: 4rem;
-          border-radius: 0;
-        }
-
-        .carousel-caption p {
-          font-size: 0.9rem;
-        }
-
-        .carousel-caption .btn {
-          font-size: 1rem;
-          padding: 0.8rem 2rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner-grow text-primary" role="status"></div>
-    </div>
-    <!-- Spinner End -->
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-      <div class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5" data-i18n-dir="text">
-          <div
-            class="h-100 d-inline-flex align-items-center border-start border-end px-3"
-          >
-            <small class="fa fa-phone-alt ms-2"></small>
-            <small data-i18n="topbar.phone">+012 345 6789</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center border-start px-3">
-            <small class="far fa-envelope-open ms-2"></small>
-            <small data-i18n="topbar.email">info@example.com</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center border-start px-3">
-            <small class="far fa-clock ms-2"></small>
-            <small data-i18n="topbar.workingHours"
-              >من الاثنين إلى الجمعة: 09 صباحاً - 09 مساءً</small
-            >
-          </div>
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5" data-i18n-dir="text">
+        <div class="h-100 d-inline-flex align-items-center border-start border-end px-3">
+          <i class="fa fa-phone-alt ms-2 align-left"></i>
+          <span style=" unicode-bidi: embed">+963 989 104 161</span>
         </div>
-        <div class="col-lg-5 px-5 text-start" data-i18n-dir="text">
-          <div class="h-100 d-inline-flex align-items-center">
-            <a class="btn btn-square border-end border-start" href=""
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a class="btn btn-square border-end" href=""
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="btn btn-square border-end" href=""
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a class="btn btn-square border-end" href=""
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
+        <div class="h-100 d-inline-flex align-items-center border-start px-3">
+          <small class="far fa-envelope-open ms-2"></small>
+          <small >contact@power-steel.com.sy</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center border-start px-3">
+          <small class="far fa-clock ms-2"></small>
+          <small data-i18n="topbar.workingHours">من الاثنين إلى الجمعة: 09 صباحاً - 09 مساءً</small>
+        </div>
+      </div>
+      <div class="col-lg-5 px-5 text-start" data-i18n-dir="text">
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-square border-end border-start" href=""><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-square border-end" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-square border-end" href=""><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-square border-end" href=""><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
-    <!-- Topbar End -->
+  </div>
+  <!-- Topbar End -->
 
-    <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-2 shadow-sm"
-    >
-      <a href="index.html" class="navbar-brand d-flex align-items-center">
-        <img
-          src="./imgs/logo.png"
-          alt="Power Steel Logo"
-          class="logo-img animate__animated animate__fadeInLeft"
-          style="width: 60px; height: auto"
-        />
-      </a>
-      <button
-        type="button"
-        class="navbar-toggler border-0"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav m-auto py-0">
-          <a
-            href="index.html"
-            class="nav-item nav-link active fw-bold px-3 animate__animated animate__fadeInDown"
-            data-wow-delay="0.1s"
-            data-i18n="nav.home"
-            >الرئيسية</a
-          >
-          <a
-            href="services.html"
-            class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
-            data-wow-delay="0.2s"
-            data-i18n="nav.services"
-            >خدماتنا</a
-          >
-          <a
-            href="sections.html"
-            class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
-            data-wow-delay="0.3s"
-            data-i18n="nav.sections"
-            >الأقسام</a
-          >
-          <a
-            href="about.html"
-            class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
-            data-wow-delay="0.4s"
-            data-i18n="nav.about"
-            >من نحن</a
-          >
-          <a
-            href="#contact-section"
-            class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
-            data-wow-delay="0.5s"
-            data-i18n="nav.contact"
-            >اتصل بنا</a
-          >
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <div class="language-toggle">
-            <button class="btn" onclick="toggleLanguage()">
-              <span class="lang-text">EN</span>
-            </button>
-          </div>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-2 shadow-sm">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="./imgs/logo.png" alt="Power Steel Logo" class="logo-img animate__animated animate__fadeInLeft"
+        style="width: 60px; height: auto" />
+    </a>
+    <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav m-auto py-0">
+        <a href="index.html" class="nav-item nav-link active fw-bold px-3 animate__animated animate__fadeInDown"
+          data-wow-delay="0.1s" data-i18n="nav.home">الرئيسية</a>
+        <a href="services.html" class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
+          data-wow-delay="0.2s" data-i18n="nav.services">خدماتنا</a>
+        <a href="sections.html" class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
+          data-wow-delay="0.3s" data-i18n="nav.sections">الأقسام</a>
+        <a href="#about-section" class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
+          data-wow-delay="0.4s" data-i18n="nav.about">من نحن</a>
+        <a href="#contact-section" class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
+          data-wow-delay="0.5s" data-i18n="nav.contact">اتصل بنا</a>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="language-toggle">
+          <button class="btn" onclick="toggleLanguage()">
+            <span class="lang-text">EN</span>
+          </button>
         </div>
       </div>
-    </nav>
-    <!-- Navbar End -->
+    </div>
+  </nav>
+  <!-- Navbar End -->
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="w-100" src="imgs/24.jpg" alt="Steel Construction" />
-            <div class="carousel-caption">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <h1 class="logo-title animated slideInDown">
-                    Power Steel Homs
-                  </h1>
+  <!-- Carousel Start -->
+  <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="w-100"
+            src="https://img.freepik.com/premium-photo/worker-working-construction-site-against-sky_1048944-23599059.jpg"
+            alt="Steel Construction" />
+          <div class="carousel-caption">
+            <div class="row caption">
+              <div class="col-lg-12 text-center">
+                <h1 class="logo-title animated slideInDown">
+                  Power Steel Homs
+                </h1>
 
-                  <h2
-                    class="display-6 text-light mb-3 animated slideInDown"
-                  >
-                    نحول رؤيتك إلى واقع متميز
-                  </h2>
-                  <p
-                    class="fs-5 text-light mb-4 animated slideInDown"
-                  >
-                    نقدم حلولاً متكاملة في مجال الإنشاءات المعدنية، مع التركيز
-                    على الجودة والابتكار والاستدامة. خبرتنا الواسعة تمكننا من
-                    تنفيذ مشاريع معقدة باحترافية عالية.
-                  </p>
-                  <a
-                    href="#contact"
-                    class="btn btn-primary py-3 px-5 animated slideInDown"
-                    >تواصل معنا</a
-                  >
-                </div>
+                <h2 class="display-6 fw-bold text-light mb-3 animated slideInDown">
+                  نحول رؤيتك إلى واقع متميز
+                </h2>
+                <p class="fs-5 fw-medium text-light mb-4 animated slideInDown">
+                  نقدم حلولاً متكاملة في مجال الإنشاءات المعدنية، مع التركيز
+                  على الجودة والابتكار والاستدامة. خبرتنا الواسعة تمكننا من
+                  تنفيذ مشاريع معقدة باحترافية عالية.
+                </p>
+                <a href="#contact" class="btn btn-primary py-3 px-5 animated slideInDown">تواصل معنا</a>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="w-100" src="imgs/25.jpg" alt="Industrial Solutions" />
-            <div class="carousel-caption">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                      <h1 class="logo-title animated slideInDown">
-                    Power Steel Homs
+        </div>
+        <div class="carousel-item">
+          <img class="w-100"
+            src="https://img.freepik.com/premium-photo/man-working-construction-site_1048944-2229021.jpg"
+            alt="Industrial Solutions" />
+          <div class="carousel-caption">
+            <div class="row caption">
+              <div class="col-lg-12 text-center">
+                <h1 class="logo-title animated slideInDown">
+                  Power Steel Homs
+                </h1>
+                <h2 class="display-6 fw-bold text-light mb-3 animated slideInDown">
+                  نبتكر المستقبل معاً
                   </h1>
-                    <h2
-                    class="display-6 text-light mb-3 animated slideInDown"
-                  >
-                    نبتكر المستقبل معاً
-                  </h1>
-                  <p
-                    class="fs-5 text-light mb-4 animated slideInDown"
-                  >
+                  <p class="fs-5 fw-medium text-light mb-4 animated slideInDown">
                     نختص في تصميم وتنفيذ المنشآت الصناعية والمستودعات والمصانع.
                     نضمن لك جودة عالية وأداء متميز مع التركيز على السلامة والكفاءة.
                   </p>
-                  <a
-                    href="#services"
-                    class="btn btn-primary py-3 px-5 animated slideInDown"
-                    >خدماتنا</a
-                  >
-                </div>
+                  <a href="#services" class="btn btn-primary py-3 px-5 animated slideInDown">خدماتنا</a>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="w-100" src="imgs/26.jpg" alt="Commercial Projects" />
-            <div class="carousel-caption">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <h1 class="logo-title animated slideInDown">
-                    Power Steel Homs
+        </div>
+        <div class="carousel-item">
+          <img class="w-100" src="imgs/new1.jpg" alt="Commercial Projects" />
+          <div class="carousel-caption">
+            <div class="row caption">
+              <div class="col-lg-12 text-center">
+                <h1 class="logo-title animated slideInDown">
+                  Power Steel Homs
+                </h1>
+                <h2 class="display-6 fw-bold text-light mb-3 animated slideInDown">
+                  نصنع الفرق في كل مشروع
                   </h1>
-                    <h2
-                    class="display-6 text-light mb-3 animated slideInDown"
-                  >
-                    نصنع الفرق في كل مشروع
-                  </h1>
-                  <p
-                    class="fs-5 text-light mb-4 animated slideInDown"
-                  >
+                  <p class="fs-5 fw-medium text-light mb-4 animated slideInDown">
                     نقدم حلولاً مبتكرة للمشاريع التجارية والسكنية. نتميز
                     بالتصميم العصري والتنفيذ الدقيق، مع ضمان أعلى معايير الجودة
                     والسلامة.
                   </p>
-                  <a
-                    href="#projects"
-                    class="btn btn-primary py-3 px-5 animated slideInDown"
-                    >تواصل معنا</a
-                  >
-                </div>
+                  <a href="#projects" class="btn btn-primary py-3 px-5 animated slideInDown">تواصل معنا</a>
               </div>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <!-- Carousel End -->
+  </div>
+  <!-- Carousel End -->
 
-  
 
-    <!-- خياراتك الأفضل Start -->
-     <div class="container-fluid bg-light">
-    <div class="container-xxl py-5">
+
+  <!-- خياراتك الأفضل Start -->
+  <div class="container-fluid bg-light">
+    <div class="container-xxl pt-5 pb-3">
       <div class="container">
         <div class="text-center mb-4">
           <h2 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.1s">
             خياراتك الأفضل
           </h2>
-          <p
-            class="lead fs-5 mx-auto wow fadeInUp"
-            style="max-width: 700px"
-            data-wow-delay="0.1s"
-          >
+          <p class="lead fs-5 best-choice-text mx-auto wow fadeInUp" style="max-width: 700px" data-wow-delay="0.1s">
             نفخر في Power Steel Home بتنفيذ أكثر من 500 مشروع في أُتورا، مدعومين
             بخبرة تراكمية تزيد عن 25 عامًا في مجال المنشآت المعدنية. نمتلك
             المعرفة والاحترافية التي تؤهلنا لتقديم أفضل الحلول التي تلبي تطلعاتك
@@ -551,78 +205,54 @@
           </p>
         </div>
         <div class="row gx-3 text-center">
-          <div class="col wow p-2 fadeInUp" data-wow-delay="0.1s">
+          <div class="col-12 col-md-4 wow p-2 fadeInUp" data-wow-delay="0.1s">
             <div class="best-choice-card">
-              <div
-                class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
-                style="width: 120px; height: 120px"
-              >
-                <i
-                  class="fa fa-award fa-2x"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                style="width: 120px; height: 120px">
+                <i class="fa fa-award fa-2x" style="color: var(--secondary)"></i>
               </div>
               <h4 class="fw-bold mb-2">أفضل الجودة</h4>
-              <hr
-                class="mx-auto"
-                style="
+              <hr class="mx-auto" style="
                   width: 60px;
                   border-top: 2px solid var(--secondary);
                   opacity: 1;
-                "
-              />
+                " />
               <p class="text-muted px-2">
                 نحن ملتزمون بالوصول إلى أعلى معايير الجودة دون التعرض لمخاطر
                 الأمان.
               </p>
             </div>
           </div>
-          <div class="col wow p-2 fadeInUp" data-wow-delay="0.2s">
+          <div class="col-12 col-md-4 wow p-2 fadeInUp" data-wow-delay="0.2s">
             <div class="best-choice-card border">
-              <div
-                class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
-                style="width: 120px; height: 120px"
-              >
-                <i
-                  class="fa fa-calendar-alt fa-2x"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                style="width: 120px; height: 120px">
+                <i class="fa fa-calendar-alt fa-2x" style="color: var(--secondary)"></i>
               </div>
               <h4 class="fw-bold mb-2">على الوقت</h4>
-              <hr
-                class="mx-auto"
-                style="
+              <hr class="mx-auto" style="
                   width: 60px;
                   border-top: 2px solid var(--secondary);
                   opacity: 1;
-                "
-              />
+                " />
               <p class="text-muted px-2">
                 نحن نقدر الوقت ونحرص على تنفيذ المشروعات بالتوازي مع الجدول
                 الزمني.
               </p>
             </div>
           </div>
-          <div class="col wow p-2 fadeInUp" data-wow-delay="0.3s">
+          <div class="col-12 col-md-4 wow p-2 fadeInUp" data-wow-delay="0.3s">
             <div class="best-choice-card border">
-              <div
-                class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
-                style="width: 120px; height: 120px"
-              >
-                <i
-                  class="fa fa-user-tie fa-2x"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                style="width: 120px; height: 120px">
+                <i class="fa fa-user-tie fa-2x" style="color: var(--secondary)"></i>
               </div>
               <h4 class="fw-bold mb-2">خبرة</h4>
-              <hr
-                class="mx-auto"
-                style="
+              <hr class="mx-auto" style="
                   width: 60px;
                   border-top: 2px solid var(--secondary);
                   opacity: 1;
-                "
-              />
+                " />
               <p class="text-muted px-2">
                 نحن نمتلك خبرة عالية في تنفيذ المشروعات المعدنية، مما يضمن أن
                 تكون النتيجة دقيقة وتلبي تطلعاتك.
@@ -632,11 +262,70 @@
         </div>
       </div>
     </div>
-    </div>
-    <!-- خياراتك الأفضل End -->
+  </div>
+  <!-- خياراتك الأفضل End -->
 
-    
-    <!-- الأقسام Start -->
+  <!-- أنواع الخدمات Start -->
+  <div class="container-xxl py-5 ">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3 animate-on-scroll">أنواع الخدمات</h2>
+        <p class="lead fs-5 mx-auto animate-on-scroll" style="max-width: 700px">
+          نقدم مجموعة متكاملة من الخدمات في مختلف القطاعات، مع التركيز على
+          الجودة والابتكار والاستدامة
+        </p>
+      </div>
+      <div class="row g-4">
+        <!-- تجاري -->
+        <div class="col-lg-4 col-md-6 animate-on-scroll">
+          <div class="service-type-card">
+            <div class="service-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3 class="service-title">خدمات تجارية</h3>
+            <p class="service-description">
+              تصميم وتنفيذ المنشآت التجارية مثل المجمعات والمحلات التجارية، مع
+              التركيز على التصميم العصري والوظيفية
+            </p>
+          </div>
+        </div>
+        <!-- صناعي -->
+        <div class="col-lg-4 col-md-6 animate-on-scroll">
+          <div class="service-type-card">
+            <div class="service-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="service-title">خدمات صناعية</h3>
+            <p class="service-description">
+              تنفيذ المنشآت الصناعية والمصانع والمستودعات، مع ضمان أعلى معايير
+              السلامة والكفاءة
+            </p>
+          </div>
+        </div>
+        <!-- سكني -->
+        <div class="col-lg-4 col-md-6 animate-on-scroll">
+          <div class="service-type-card">
+            <div class="service-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="service-title">خدمات سكنية</h3>
+            <p class="service-description">
+              تصميم وتنفيذ المنشآت السكنية والفلل والقصور، مع التركيز على
+              الراحة والجمالية
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- أنواع الخدمات End -->
+
+
+
+  <!-- الأقسام Start -->
+  <div class="container-fluid pb-5 pt-3 bg-light">
+
     <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center mb-5">
@@ -645,7 +334,7 @@
             نقدم مجموعة متكاملة من الأقسام المتخصصة لتلبية احتياجاتكم في مجال المنشآت المعدنية
           </p>
         </div>
-        <div class="row g-4">
+        <div class="row text-center g-4">
           <!-- قسم 1 -->
           <div class="col-lg-4 col-md-6">
             <div class="section-card">
@@ -654,7 +343,9 @@
               </div>
               <h3 class="section-title">قسم الهندسي</h3>
               <p class="section-description">
-                يُعنى بإعداد المخططات الهندسية التفصيلية، بما يشمل التصاميم التنفيذية والمعمارية والإنشائية اللازمة لتنفيذ المشاريع بدقة عالية واحترافية، مع الالتزام بالمعايير الفنية والجودة المطلوبة.
+                يُعنى بإعداد المخططات الهندسية التفصيلية، بما يشمل التصاميم التنفيذية والمعمارية والإنشائية اللازمة
+                لتنفيذ
+                المشاريع بدقة عالية واحترافية، مع الالتزام بالمعايير الفنية والجودة المطلوبة.
               </p>
             </div>
           </div>
@@ -666,7 +357,8 @@
               </div>
               <h3 class="section-title">قسم التصنيع</h3>
               <p class="section-description">
-                يُعنى بتنفيذ الأعمال المعدنية استنادًا إلى المخططات المعتمدة من القسم الهندسي، ويشمل قص الحديد وتشكيله وتجهيزه للتركيب، مع الالتزام بالجودة والمواعيد المحددة.
+                يُعنى بتنفيذ الأعمال المعدنية استنادًا إلى المخططات المعتمدة من القسم الهندسي، ويشمل قص الحديد وتشكيله
+                وتجهيزه للتركيب، مع الالتزام بالجودة والمواعيد المحددة.
               </p>
             </div>
           </div>
@@ -678,7 +370,9 @@
               </div>
               <h3 class="section-title">قسم ضرب الرمل والدهانات</h3>
               <p class="section-description">
-                يُعنى بمعالجة العناصر المعدنية وتجهيزها للتركيب باستخدام تقنية ضرب الرمل لإزالة الشوائب، ثم تطبيق الطلاءات اللازمة لضمان متانة وجودة القطع المعدنية قبل تركيبها.
+                يُعنى بمعالجة العناصر المعدنية وتجهيزها للتركيب باستخدام تقنية ضرب الرمل لإزالة الشوائب، ثم تطبيق
+                الطلاءات
+                اللازمة لضمان متانة وجودة القطع المعدنية قبل تركيبها.
               </p>
             </div>
           </div>
@@ -691,688 +385,157 @@
         </div>
       </div>
     </div>
-    <!-- الأقسام End -->
+  </div>
+  <!-- الأقسام End -->
 
-       <!-- أنواع الخدمات Start -->
-        <div class="container-fluid pb-5 pt-4 bg-light">
-    <div class="container-xxl py-4 ">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold mb-3 animate-on-scroll">أنواع الخدمات</h2>
-          <p
-            class="lead fs-5 mx-auto animate-on-scroll"
-            style="max-width: 700px"
-          >
-            نقدم مجموعة متكاملة من الخدمات في مختلف القطاعات، مع التركيز على
-            الجودة والابتكار والاستدامة
-          </p>
+
+  <!--  Services Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 70px">
+        <h2 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.1s">
+          خدماتنا
+        </h2>
+
+        <p class="lead mx-auto wow fadeInUp" style="max-width: 700px" data-wow-delay="0.1s">
+          نقدم مجموعة متكاملة من الخدمات في مجال المنشآت المعدنية، مع التركيز
+          على الجودة والابتكار والاستدامة
+        </p>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5 gx-3 text-center">
+        <div class="col wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-layer-group fa-2x all-services-icon" style="color: var(--secondary)"></i>
+            </div>
+            <h5 class="fw-bold mb-2">تصنيع وتركيب المباني المختلطة</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              تشمل هذه الخدمة تنفيذ مبانٍ تجمع بين الهياكل المعدنية والأعمال
+              الخرسانية، مثل المجمعات التجارية، والمصانع، والمباني السكنية أو
+              الإدارية.
+            </p>
+          </div>
         </div>
-        <div class="row g-4">
-          <!-- تجاري -->
-          <div class="col-lg-4 col-md-6 animate-on-scroll">
-            <div class="service-type-card">
-              <div class="service-icon">
-                <i class="fas fa-store"></i>
-              </div>
-              <h3 class="service-title">خدمات تجارية</h3>
-              <p class="service-description">
-                تصميم وتنفيذ المنشآت التجارية مثل المجمعات والمحلات التجارية، مع
-                التركيز على التصميم العصري والوظيفية
-              </p>
+        <div class="col wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-warehouse fa-2x all-services-icon" style="color: var(--secondary)"></i>
             </div>
+            <h5 class="fw-bold mb-2">تصنيع هنكارات وأسقف معدنية</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              يتم تصميم وتصنيع الهناجر المعدنية لاستخدامها كمخازن، مصانع، أو
+              مستودعات، وتتميز بالقوة والقدرة على تغطية مساحات واسعة بدون
+              أعمدة داخلية.
+            </p>
           </div>
-          <!-- صناعي -->
-          <div class="col-lg-4 col-md-6 animate-on-scroll">
-            <div class="service-type-card">
-              <div class="service-icon">
-                <i class="fas fa-industry"></i>
-              </div>
-              <h3 class="service-title">خدمات صناعية</h3>
-              <p class="service-description">
-                تنفيذ المنشآت الصناعية والمصانع والمستودعات، مع ضمان أعلى معايير
-                السلامة والكفاءة
-              </p>
+        </div>
+        <div class="col wow fadeInUp" data-wow-delay="0.3s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-oil-can fa-2x all-services-icon" style="color: var(--secondary)"></i>
             </div>
+            <h5 class="fw-bold mb-2">تصنيع خزانات معدنية</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              يتم تصنيع خزانات معدنية لحفظ المواد السائلة أو الغازية مثل
+              الماء، الوقود، الزيوت أو المواد الكيميائية بمقاسات مختلفة.
+            </p>
           </div>
-          <!-- سكني -->
-          <div class="col-lg-4 col-md-6 animate-on-scroll">
-            <div class="service-type-card">
-              <div class="service-icon">
-                <i class="fas fa-home"></i>
-              </div>
-              <h3 class="service-title">خدمات سكنية</h3>
-              <p class="service-description">
-                تصميم وتنفيذ المنشآت السكنية والفلل والقصور، مع التركيز على
-                الراحة والجمالية
-              </p>
+        </div>
+
+        <div class="col wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-industry fa-2x all-services-icon" style="color: var(--secondary)"></i>
             </div>
+            <h5 class="fw-bold mb-2">تصنيع مباني معدنية للمكنات</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              إنشاء هياكل معدنية مخصصة لتركيب وتشغيل المعدات والآلات الصناعية
+              مع مراعاة الاهتزازات والوزن الثقيل.
+            </p>
+          </div>
+        </div>
+
+        <div class="col wow fadeInUp" data-wow-delay="0.3s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-flask fa-2x all-services-icon" style="color: var(--secondary)"></i>
+            </div>
+            <h5 class="fw-bold mb-2">تجهيز وتركيب معامل</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              تجهيز المعامل بالبنية التحتية المعدنية اللازمة مثل الهياكل،
+              الطاولات، الرفوف، والأنظمة الداعمة.
+            </p>
+          </div>
+        </div>
+
+        <div class="col wow fadeInUp" data-wow-delay="0.4s">
+          <div class="card-service">
+            <div class="mb-4">
+              <i class="fa fa-tools fa-2x all-services-icon" style="color: var(--secondary)"></i>
+            </div>
+            <h5 class="fw-bold mb-2">تصنيع الأعمال المعدنية</h5>
+            <p class="text-muted pb-4" style="font-size: 14px">
+              تصنيع جميع أنواع الهياكل والأجزاء المعدنية مثل الأبواب،
+              الشبابيك، السلالم، الأسيجة، والقواعد المعدنية.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-    <!-- أنواع الخدمات End -->
-
-
-    <!--  Services Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center" style="margin-bottom: 70px">
-          <h2 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.1s">
-            خدماتنا
-          </h2>
-
-          <p
-            class="lead mx-auto wow fadeInUp"
-            style="max-width: 700px"
-            data-wow-delay="0.1s"
-          >
-            نقدم مجموعة متكاملة من الخدمات في مجال المنشآت المعدنية، مع التركيز
-            على الجودة والابتكار والاستدامة
-          </p>
-        </div>
-        <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5 gx-3 text-center"
-        >
-          <div class="col wow fadeInUp" data-wow-delay="0.1s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-layer-group fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تصنيع وتركيب المباني المختلطة</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                تشمل هذه الخدمة تنفيذ مبانٍ تجمع بين الهياكل المعدنية والأعمال
-                الخرسانية، مثل المجمعات التجارية، والمصانع، والمباني السكنية أو
-                الإدارية.
-              </p>
-            </div>
-          </div>
-          <div class="col wow fadeInUp" data-wow-delay="0.2s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-warehouse fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تصنيع هنكارات وأسقف معدنية</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                يتم تصميم وتصنيع الهناجر المعدنية لاستخدامها كمخازن، مصانع، أو
-                مستودعات، وتتميز بالقوة والقدرة على تغطية مساحات واسعة بدون
-                أعمدة داخلية.
-              </p>
-            </div>
-          </div>
-          <div class="col wow fadeInUp" data-wow-delay="0.3s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-oil-can fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تصنيع خزانات معدنية</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                يتم تصنيع خزانات معدنية لحفظ المواد السائلة أو الغازية مثل
-                الماء، الوقود، الزيوت أو المواد الكيميائية بمقاسات مختلفة.
-              </p>
-            </div>
-          </div>
-
-          <div class="col wow fadeInUp" data-wow-delay="0.1s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-industry fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تصنيع مباني معدنية للمكنات</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                إنشاء هياكل معدنية مخصصة لتركيب وتشغيل المعدات والآلات الصناعية
-                مع مراعاة الاهتزازات والوزن الثقيل.
-              </p>
-            </div>
-          </div>
-
-          <div class="col wow fadeInUp" data-wow-delay="0.3s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-flask fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تجهيز وتركيب معامل</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                تجهيز المعامل بالبنية التحتية المعدنية اللازمة مثل الهياكل،
-                الطاولات، الرفوف، والأنظمة الداعمة.
-              </p>
-            </div>
-          </div>
-
-          <div class="col wow fadeInUp" data-wow-delay="0.4s">
-            <div class="card-service">
-              <div class="mb-4">
-                <i
-                  class="fa fa-tools fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
-              </div>
-              <h5 class="fw-bold mb-2">تصنيع الأعمال المعدنية</h5>
-              <p class="text-muted pb-4" style="font-size: 14px">
-                تصنيع جميع أنواع الهياكل والأجزاء المعدنية مثل الأبواب،
-                الشبابيك، السلالم، الأسيجة، والقواعد المعدنية.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a
-            href="services.html"
-            class="btn btn-services wow fadeInUp"
-            data-wow-delay="0.4s"
-          >
-            <span>عرض كل الخدمات</span>
-            <i class="fas fa-arrow-left ms-2"></i>
-          </a>
-        </div>
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-services wow fadeInUp" data-wow-delay="0.4s">
+          <span>عرض كل الخدمات</span>
+          <i class="fas fa-arrow-left ms-2"></i>
+        </a>
       </div>
     </div>
-    <!-- All Services End -->
+  </div>
+  <!-- All Services End -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div
-              class="position-relative overflow-hidden pe-5 pt-5 h-100"
-              style="min-height: 400px"
-            >
-              <img
-                class="position-absolute w-100 h-100"
-                src="img/about.jpg"
-                alt=""
-                style="object-fit: cover"
-              />
-              <div
-                class="position-absolute top-0 end-0 bg-white ps-3 pb-3"
-                style="width: 200px; height: 200px"
-              >
-                <div
-                  class="d-flex flex-column justify-content-center text-center h-100 p-3"
-                  style="background-color: var(--primary)"
-                >
-                  <h1 class="text-white">25</h1>
-                  <h2 class="text-white">عام</h2>
-                  <h5 class="text-white mb-0">خبرة</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="h-100">
-              <div class="border-end border-5 border-primary pe-4 mb-5">
-                <h6 class="text-body text-uppercase mb-2">من نحن</h6>
-                <h1 class="display-6 mb-0">حلول فريدة للمنشآت المعدنية!</h1>
-              </div>
-              <p>
-                نحن نقدم خدمات متكاملة في مجال المنشآت المعدنية. خبرتنا الطويلة
-                في المجال تجعلنا الخيار الأمثل لمشاريعكم
-              </p>
-              <p class="mb-4">
-                نلتزم بتقديم أفضل الخدمات لعملائنا الكرام مع ضمان الجودة العالية
-                والأسعار المنافسة
-              </p>
-              <div class="border-top mt-4 pt-4">
-                <div class="row g-4">
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
-                    <i
-                      class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                      style="color: var(--secondary)"
-                    ></i>
-                    <h6 class="mb-0">خدمات في الموعد المحدد</h6>
-                  </div>
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
-                    <i
-                      class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                      style="color: var(--secondary)"
-                    ></i>
-                    <h6 class="mb-0">خدمات على مدار الساعة</h6>
-                  </div>
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
-                    <i
-                      class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                      style="color: var(--secondary)"
-                    ></i>
-                    <h6 class="mb-0">فنيون معتمدون</h6>
-                  </div>
-                </div>
+  <!-- About Start -->
+  <div class="container-xxl py-5" id="about-section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px">
+            <img class="position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover" />
+            <div class="position-absolute top-0 end-0 bg-white ps-3 pb-3" style="width: 200px; height: 200px">
+              <div class="d-flex flex-column justify-content-center text-center h-100 p-3"
+                style="background-color: var(--primary)">
+                <h1 class="text-white">25</h1>
+                <h2 class="text-white">عام</h2>
+                <h5 class="text-white mb-0">خبرة</h5>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- About End -->
-
-  
-    <!-- Features Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="h-100">
             <div class="border-end border-5 border-primary pe-4 mb-5">
-              <h6
-                class="text-body text-uppercase mb-2 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                لماذا تختارنا!
-              </h6>
-              <h1 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
-                تخصصاتنا ومميزات الشركة
-              </h1>
+              <h6 class="text-body text-uppercase mb-2">من نحن</h6>
+              <h1 class="display-6 mb-0">حلول فريدة للمنشآت المعدنية!</h1>
             </div>
-            <p class="mb-5">
-              نحن نقدم مجموعة واسعة من الخدمات في مجال المنشآت المعدنية، مع ضمان
-              الجودة العالية والأسعار المنافسة
+            <p>
+              نحن نقدم خدمات متكاملة في مجال المنشآت المعدنية. خبرتنا الطويلة
+              في المجال تجعلنا الخيار الأمثل لمشاريعكم
             </p>
-            <div class="row gy-5 gx-4">
-              <div
-                class="col-sm-6 feature-card wow fadeIn"
-                data-wow-delay="0.1s"
-              >
-                <div class="d-flex align-items-center mb-3">
-                  <i
-                    class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <h6 class="mb-0">مجموعة واسعة من الخدمات</h6>
-                </div>
-                <span>نقدم جميع خدمات المنشآت المعدنية</span>
-              </div>
-              <div
-                class="col-sm-6 feature-card wow fadeIn"
-                data-wow-delay="0.2s"
-              >
-                <div class="d-flex align-items-center mb-3">
-                  <i
-                    class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <h6 class="mb-0 wow fadeInUp" data-wow-delay="0.2s">
-                    خبرة أكثر من 25 عاماً
-                  </h6>
-                </div>
-                <span>خبرة واسعة في مجال المنشآت المعدنية</span>
-              </div>
-              <div
-                class="col-sm-6 feature-card wow fadeIn"
-                data-wow-delay="0.3s"
-              >
-                <div class="d-flex align-items-center mb-3">
-                  <i
-                    class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <h6 class="mb-0">عدد كبير من العملاء الراضين</h6>
-                </div>
-                <span>نفخر بثقة عملائنا الكرام</span>
-              </div>
-              <div
-                class="col-sm-6 feature-card wow fadeIn"
-                data-wow-delay="0.4s"
-              >
-                <div class="d-flex align-items-center mb-3">
-                  <i
-                    class="fa fa-check fa-2x flex-shrink-0 ms-3"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <h6 class="mb-0">أسعار منافسة وموثوقة</h6>
-                </div>
-                <span>نقدم أفضل الأسعار مع ضمان الجودة</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div
-              class="position-relative overflow-hidden ps-5 pt-5 h-100"
-              style="min-height: 400px"
-            >
-              <img
-                class="position-absolute w-100 h-100"
-                src="img/feature.jpg"
-                alt=""
-                style="object-fit: cover"
-              />
-              <div
-                class="position-absolute top-0 start-0 bg-white pe-3 pb-3"
-                style="width: 200px; height: 200px"
-              >
-                <div
-                  class="d-flex flex-column justify-content-center text-center h-100 p-3"
-                  style="background: var(--secondary)"
-                >
-                  <h1 class="text-white">25</h1>
-                  <h2 class="text-white">سنوات</h2>
-                  <h5 class="text-white mb-0">خبرة</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Features End -->
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5 align-items-start mb-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="border-end border-2 pe-4" style="border-color: var(--secondary) !important;">
-              <h6 class="text-body text-uppercase mb-2">الفريق</h6>
-              <h1 class="display-6 mb-0">العمال المحترفين</h1>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <p class="mb-0">
-              نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في
-              المجال تجعلنا الخيار الأمثل لمشاريعكم
-            </p>
-          </div>
-        </div>
-        <div class="team-carousel owl-carousel">
-          <div class="team-item position-relative">
-            <img class="img-fluid rounded-2" src="img/team-1.jpg" alt="" />
-            <div class="team-text bg-white p-4 team-card-custom">
-              <h5 class="team-name">اسم الموظف الأول</h5>
-              <span class="team-role">مهندس مشاريع</span>
-              <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000001" class="team-phone-link">+963 900 000 001</a></div>
-            </div>
-          </div>
-          <div class="team-item position-relative">
-            <img class="img-fluid rounded-2" src="img/team-2.jpg" alt="" />
-            <div class="team-text bg-white p-4 team-card-custom">
-              <h5 class="team-name">اسم الموظف الثاني</h5>
-              <span class="team-role">محاسب الشركة</span>
-              <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000002" class="team-phone-link">+963 900 000 002</a></div>
-            </div>
-          </div>
-          <div class="team-item position-relative">
-            <img class="img-fluid rounded-2" src="img/team-3.jpg" alt="" />
-            <div class="team-text bg-white p-4 team-card-custom">
-              <h5 class="team-name">اسم الموظف الثالث</h5>
-              <span class="team-role">المدير التنفيذي</span>
-              <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000003" class="team-phone-link">+963 900 000 003</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="border-end border-2 pe-4 mb-5" style="border-color: var(--secondary) !important;">
-              <h6 class="text-body text-uppercase mb-2">العملاء الراضين</h6>
-              <h1 class="display-6 mb-0">ماذا يقولون عننا</h1>
-            </div>
             <p class="mb-4">
-              نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في
-              المجال تجعلنا الخيار الأمثل لمشاريعكم
+              نلتزم بتقديم أفضل الخدمات لعملائنا الكرام مع ضمان الجودة العالية
+              والأسعار المنافسة
             </p>
-            <div class="row g-4">
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center mb-2">
-                  <i class="fa fa-users fa-2x text-primary flex-shrink-0"></i>
-                  <h1 class="me-3 mb-0">123+</h1>
+            <div class="border-top mt-4 pt-4">
+              <div class="row g-4">
+                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
+                  <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                  <h6 class="mb-0">خدمات في الموعد المحدد</h6>
                 </div>
-                <h5 class="mb-0">العملاء الراضين</h5>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center mb-2">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0"></i>
-                  <h1 class="me-3 mb-0">123+</h1>
+                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
+                  <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                  <h6 class="mb-0">خدمات على مدار الساعة</h6>
                 </div>
-                <h5 class="mb-0">المشاريع المنجزة</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="testimonial-carousel owl-carousel">
-              <div class="testimonial-item text-center">
-                <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-1.jpg" alt="" style="width:90px;height:90px;object-fit:cover;" />
-                <p class="fs-5">نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في المجال تجعلنا الخيار الأمثل لمشاريعكم</p>
-                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
-                <h5 class="mb-1">الاسم الأول</h5>
-                <span class="text-secondary">مدير شركة</span>
-              </div>
-              <div class="testimonial-item text-center">
-                <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-2.jpg" alt="" style="width:90px;height:90px;object-fit:cover;" />
-                <p class="fs-5">خدمة ممتازة وسرعة في التنفيذ. أنصح بالتعامل مع Power Steel Home.</p>
-                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
-                <h5 class="mb-1">الاسم الثاني</h5>
-                <span class="text-secondary">رائد أعمال</span>
-              </div>
-              <div class="testimonial-item text-center">
-                <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-3.jpg" alt="" style="width:90px;height:90px;object-fit:cover;" />
-                <p class="fs-5">احترافية عالية في العمل واهتمام كبير بالتفاصيل. شكراً لكم!</p>
-                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
-                <h5 class="mb-1">الاسم الثالث</h5>
-                <span class="text-secondary">مهندس معماري</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Testimonial End -->
-
-    <!-- سكشن تعريفي وقيم الشركة Start -->
-    <div class="container-xxl pb-5">
-      <div
-        class="bg-warning about-section-header d-flex justify-content-between align-items-center px-4 py-3 wow fadeInDown"
-        data-wow-delay="0.1s"
-        style="background: var(--secondary) !important"
-      >
-        <span class="fw-bold text-white fs-5"
-          >نحن نفهم احتياجاتك في الإنشاءات</span
-        >
-        <a href="#" class="btn btn-dark fw-bold px-4 py-2">طلب عرض سعر</a>
-      </div>
-      <div class="container py-5">
-        <div class="row g-5 align-items-start">
-          <!-- العمود الأيمن: من نحن -->
-          <div class="col-lg-6">
-            <div
-              class="mb-3 text-secondary wow fadeInUp"
-              data-wow-delay="0.15s"
-              style="letter-spacing: 1px"
-            >
-              من نحن
-            </div>
-            <h2 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">
-              ننجز مشاريع رائدة
-            </h2>
-            <p class="mb-4 text-muted fs-6 wow fadeInUp" data-wow-delay="0.25s">
-              نحن في Power Steel Home نؤمن بأن كل مشروع هو فرصة لصنع علامة فارقة
-              في عالم الإنشاءات المعدنية. خبرتنا واحترافيتنا تجعلنا الخيار
-              الأمثل لتحقيق رؤيتك.
-            </p>
-            <div class="row g-4">
-              <div class="col-6 col-sm-6">
-                <div
-                  class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  <i
-                    class="fa fa-trophy fa-2x text-warning"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <span class="fw-bold">سمعة ممتازة</span>
-                </div>
-              </div>
-              <div class="col-6 col-sm-6">
-                <div
-                  class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp"
-                  data-wow-delay="0.35s"
-                >
-                  <i
-                    class="fa fa-handshake fa-2x text-warning"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <span class="fw-bold">بناء الشراكات</span>
-                </div>
-              </div>
-              <div class="col-6 col-sm-6">
-                <div
-                  class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp"
-                  data-wow-delay="0.4s"
-                >
-                  <i
-                    class="fa fa-user-check fa-2x text-warning"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <span class="fw-bold">الالتزام</span>
-                </div>
-              </div>
-              <div class="col-6 col-sm-6">
-                <div
-                  class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp"
-                  data-wow-delay="0.45s"
-                >
-                  <i
-                    class="fa fa-users fa-2x text-warning"
-                    style="color: var(--secondary)"
-                  ></i>
-                  <span class="fw-bold">فريق محترف</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- العمود الأيسر: قيمنا -->
-          <div class="col-lg-6">
-            <div
-              class="mb-3 text-secondary wow fadeInUp"
-              data-wow-delay="0.15s"
-              style="letter-spacing: 1px"
-            >
-              قيمنا
-            </div>
-            <h3 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">
-              ما يميزنا في العمل
-            </h3>
-            <p class="mb-4 text-muted fs-6 wow fadeInUp" data-wow-delay="0.25s">
-              نلتزم بمجموعة من القيم التي تضمن لعملائنا أعلى مستويات الجودة
-              والثقة في كل مشروع.
-            </p>
-            <div class="accordion" id="valuesAccordion">
-              <div
-                class="accordion-item mb-2 wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                <h2 class="accordion-header" id="headingOne">
-                  <button
-                    class="accordion-button w-100 fw-bold text-warning"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                    style="color: var(--secondary)"
-                  >
-                    <span>الأمان</span>
-                    <span
-                      class="accordion-arrow me-auto d-flex align-items-center justify-content-center"
-                    >
-                      <i class="fa fa-chevron-down"></i>
-                    </span>
-                  </button>
-                </h2>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#valuesAccordion"
-                >
-                  <div class="accordion-body">
-                    نحرص على تطبيق أعلى معايير الأمان في جميع مراحل العمل، لضمان
-                    سلامة الجميع وجودة التنفيذ.
-                  </div>
-                </div>
-              </div>
-              <div
-                class="accordion-item mb-2 wow fadeInUp"
-                data-wow-delay="0.35s"
-              >
-                <h2 class="accordion-header" id="headingTwo">
-                  <button
-                    class="accordion-button collapsed fw-bold text-warning"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                    style="color: var(--secondary)"
-                  >
-                    خدمة العملاء
-                    <span
-                      class="accordion-arrow me-auto d-flex align-items-center justify-content-center"
-                    >
-                      <i class="fa fa-chevron-down"></i>
-                    </span>
-                  </button>
-                </h2>
-                <div
-                  id="collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#valuesAccordion"
-                >
-                  <div class="accordion-body">
-                    رضا العميل هو أولويتنا، ونعمل دائمًا على تلبية احتياجاته
-                    وتقديم الدعم الكامل في كل خطوة.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                <h2 class="accordion-header" id="headingThree">
-                  <button
-                    class="accordion-button collapsed fw-bold text-warning"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                    style="color: var(--secondary)"
-                  >
-                    النزاهة
-                    <span
-                      class="accordion-arrow me-auto d-flex align-items-center justify-content-center"
-                    >
-                      <i class="fa fa-chevron-down"></i>
-                    </span>
-                  </button>
-                </h2>
-                <div
-                  id="collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#valuesAccordion"
-                >
-                  <div class="accordion-body">
-                    نلتزم بالشفافية والمصداقية في جميع تعاملاتنا، ونضع ثقة
-                    عملائنا فوق كل اعتبار.
-                  </div>
+                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
+                  <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                  <h6 class="mb-0">فنيون معتمدون</h6>
                 </div>
               </div>
             </div>
@@ -1380,329 +543,550 @@
         </div>
       </div>
     </div>
-    <!-- سكشن تعريفي وقيم الشركة End -->
+  </div>
+  <!-- About End -->
 
-    <!-- سكشن المشاريع الأخيرة Start -->
-    <div class="container-xxl pb-5">
-      <div class="container">
-        <div class="text-center mb-4">
-          <span
-            class="text-secondary fw-bold wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="letter-spacing: 1px"
-            >عمل متميز</span
-          >
-          <h2 class="fw-bold my-3 wow fadeInUp" data-wow-delay="0.2s">
-            مشاريعنا الأخيرة
+
+  <!-- Features Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="border-end border-5 border-primary pe-4 mb-5">
+            <h6 class="text-body text-uppercase mb-2 wow fadeInUp" data-wow-delay="0.1s">
+              لماذا تختارنا!
+            </h6>
+            <h1 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
+              تخصصاتنا ومميزات الشركة
+            </h1>
+          </div>
+          <p class="mb-5">
+            نحن نقدم مجموعة واسعة من الخدمات في مجال المنشآت المعدنية، مع ضمان
+            الجودة العالية والأسعار المنافسة
+          </p>
+          <div class="row gy-5 gx-4">
+            <div class="col-sm-6 feature-card wow fadeIn" data-wow-delay="0.1s">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                <h6 class="mb-0">مجموعة واسعة من الخدمات</h6>
+              </div>
+              <span>نقدم جميع خدمات المنشآت المعدنية</span>
+            </div>
+            <div class="col-sm-6 feature-card wow fadeIn" data-wow-delay="0.2s">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                <h6 class="mb-0 wow fadeInUp" data-wow-delay="0.2s">
+                  خبرة أكثر من 25 عاماً
+                </h6>
+              </div>
+              <span>خبرة واسعة في مجال المنشآت المعدنية</span>
+            </div>
+            <div class="col-sm-6 feature-card wow fadeIn" data-wow-delay="0.3s">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                <h6 class="mb-0">عدد كبير من العملاء الراضين</h6>
+              </div>
+              <span>نفخر بثقة عملائنا الكرام</span>
+            </div>
+            <div class="col-sm-6 feature-card wow fadeIn" data-wow-delay="0.4s">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa fa-check fa-2x flex-shrink-0 ms-3" style="color: var(--secondary)"></i>
+                <h6 class="mb-0">أسعار منافسة وموثوقة</h6>
+              </div>
+              <span>نقدم أفضل الأسعار مع ضمان الجودة</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px">
+            <img class="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style="object-fit: cover" />
+            <div class="position-absolute top-0 start-0 bg-white pe-3 pb-3" style="width: 200px; height: 200px">
+              <div class="d-flex flex-column justify-content-center text-center h-100 p-3"
+                style="background: var(--secondary)">
+                <h1 class="text-white">25</h1>
+                <h2 class="text-white">سنوات</h2>
+                <h5 class="text-white mb-0">خبرة</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Features End -->
+
+  <!-- Team Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start mb-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="border-end border-2 pe-4" style="border-color: var(--secondary) !important;">
+            <h6 class="text-body text-uppercase mb-2">الفريق</h6>
+            <h1 class="display-6 mb-0">العمال المحترفين</h1>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+          <p class="mb-0">
+            نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في
+            المجال تجعلنا الخيار الأمثل لمشاريعكم
+          </p>
+        </div>
+      </div>
+      <div class="team-carousel owl-carousel">
+        <div class="team-item position-relative">
+          <img class="img-fluid rounded-2" src="img/team-1.jpg" alt="" />
+          <div class="team-text bg-white p-4 team-card-custom">
+            <h5 class="team-name">اسم الموظف الأول</h5>
+            <span class="team-role">مهندس مشاريع</span>
+            <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000001"
+                class="team-phone-link"><span style="direction: ltr; unicode-bidi: embed;">+963 900 000 001</span></a></div>
+          </div>
+        </div>
+        <div class="team-item position-relative">
+          <img class="img-fluid rounded-2" src="img/team-2.jpg" alt="" />
+          <div class="team-text bg-white p-4 team-card-custom">
+            <h5 class="team-name">اسم الموظف الثاني</h5>
+            <span class="team-role">محاسب الشركة</span>
+            <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000002"
+                class="team-phone-link"><span style="direction: ltr; unicode-bidi: embed;">+963 900 000 002</span></a></div>
+          </div>
+        </div>
+        <div class="team-item position-relative">
+          <img class="img-fluid rounded-2" src="img/team-3.jpg" alt="" />
+          <div class="team-text bg-white p-4 team-card-custom">
+            <h5 class="team-name">اسم الموظف الثالث</h5>
+            <span class="team-role">المدير التنفيذي</span>
+            <div class="team-phone mt-2"><i class="fa fa-phone-alt ms-2 text-secondary"></i><a href="tel:+963900000003"
+                class="team-phone-link"><span style="direction: ltr; unicode-bidi: embed;">+963 900 000 003</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- Team End -->
+
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="border-end border-2 pe-4 mb-5" style="border-color: var(--secondary) !important;">
+            <h6 class="text-body text-uppercase mb-2">العملاء الراضين</h6>
+            <h1 class="display-6 mb-0">ماذا يقولون عننا</h1>
+          </div>
+          <p class="mb-4">
+            نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في
+            المجال تجعلنا الخيار الأمثل لمشاريعكم
+          </p>
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fa fa-users fa-2x text-primary flex-shrink-0"></i>
+                <h1 class="me-3 mb-0">123+</h1>
+              </div>
+              <h5 class="mb-0">العملاء الراضين</h5>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fa fa-check fa-2x text-primary flex-shrink-0"></i>
+                <h1 class="me-3 mb-0">123+</h1>
+              </div>
+              <h5 class="mb-0">المشاريع المنجزة</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="testimonial-carousel owl-carousel">
+            <div class="testimonial-item text-center">
+              <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-1.jpg" alt=""
+                style="width:90px;height:90px;object-fit:cover;" />
+              <p class="fs-5">نحن نقدم خدمات متكاملة في مجال البناء والتجديد. خبرتنا الطويلة في المجال تجعلنا الخيار
+                الأمثل لمشاريعكم</p>
+              <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
+              <h5 class="mb-1">الاسم الأول</h5>
+              <span class="text-secondary">مدير شركة</span>
+            </div>
+            <div class="testimonial-item text-center">
+              <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-2.jpg" alt=""
+                style="width:90px;height:90px;object-fit:cover;" />
+              <p class="fs-5">خدمة ممتازة وسرعة في التنفيذ. أنصح بالتعامل مع Power Steel Home.</p>
+              <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
+              <h5 class="mb-1">الاسم الثاني</h5>
+              <span class="text-secondary">رائد أعمال</span>
+            </div>
+            <div class="testimonial-item text-center">
+              <img class="img-fluid mb-4 rounded-circle" src="img/testimonial-3.jpg" alt=""
+                style="width:90px;height:90px;object-fit:cover;" />
+              <p class="fs-5">احترافية عالية في العمل واهتمام كبير بالتفاصيل. شكراً لكم!</p>
+              <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 5px"></div>
+              <h5 class="mb-1">الاسم الثالث</h5>
+              <span class="text-secondary">مهندس معماري</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
+
+  <!-- سكشن تعريفي وقيم الشركة Start -->
+  <div class="container-xxl pb-5">
+    <div
+      class="bg-warning about-section-header d-flex justify-content-between align-items-center px-4 py-3 wow fadeInDown"
+      data-wow-delay="0.1s" style="background: var(--secondary) !important">
+      <span class="fw-bold text-white fs-5">نحن نفهم احتياجاتك في الإنشاءات</span>
+      <a href="#" class="btn btn-dark fw-bold px-4 py-2">طلب عرض سعر</a>
+    </div>
+    <div class="container py-5">
+      <div class="row g-5 align-items-start">
+        <!-- العمود الأيمن: من نحن -->
+        <div class="col-lg-6">
+          <div class="mb-3 text-secondary wow fadeInUp" data-wow-delay="0.15s" style="letter-spacing: 1px">
+            من نحن
+          </div>
+          <h2 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">
+            ننجز مشاريع رائدة
           </h2>
-        </div>
-        <div
-          class="d-flex flex-wrap justify-content-center gap-2 mb-4 wow fadeInUp"
-          data-wow-delay="0.3s"
-        >
-          <button
-            class="btn btn-warning text-white fw-bold px-4 py-2 active filter-btn"
-            data-filter="all"
-            style="background: var(--secondary); border: none"
-          >
-            الكل
-          </button>
-          <button
-            class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
-            data-filter="commercial"
-            style="color: var(--secondary); border-color: var(--secondary)"
-          >
-            تجاري
-          </button>
-          <button
-            class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
-            data-filter="infrastructure"
-            style="color: var(--secondary); border-color: var(--secondary)"
-          >
-            بنية تحتية
-          </button>
-          <button
-            class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
-            data-filter="residential"
-            style="color: var(--secondary); border-color: var(--secondary)"
-          >
-            سكني
-          </button>
-        </div>
-        <div class="row mb-4">
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.1s"
-            data-category="commercial"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-1"
-            >
-              <img
-                src="imgs/10.jpeg"
-                class="img-fluid w-100 h-100 rounded-2"
-                alt="مشروع 1"
-                style="height: 270px; object-fit: cover"
-              />
+          <p class="mb-4 text-muted fs-6 wow fadeInUp" data-wow-delay="0.25s">
+            نحن في Power Steel Home نؤمن بأن كل مشروع هو فرصة لصنع علامة فارقة
+            في عالم الإنشاءات المعدنية. خبرتنا واحترافيتنا تجعلنا الخيار
+            الأمثل لتحقيق رؤيتك.
+          </p>
+          <div class="row g-4">
+            <div class="col-6 col-sm-6">
+              <div class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+                <i class="fa fa-trophy fa-2x text-warning" style="color: var(--secondary)"></i>
+                <span class="fw-bold">سمعة ممتازة</span>
+              </div>
             </div>
-          </div>
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.2s"
-            data-category="infrastructure"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-2"
-            >
-              <img
-                src="imgs/11.jpeg"
-                class="img-fluid w-100 h-100 rounded-2"
-                alt="مشروع 2"
-                style="height: 270px; object-fit: cover"
-              />
+            <div class="col-6 col-sm-6">
+              <div class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp" data-wow-delay="0.35s">
+                <i class="fa fa-handshake fa-2x text-warning" style="color: var(--secondary)"></i>
+                <span class="fw-bold">بناء الشراكات</span>
+              </div>
             </div>
-          </div>
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.3s"
-            data-category="residential"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-3"
-            >
-              <img
-                src="imgs/12.jpeg"
-                class="img-fluid w-100 h-100"
-                alt="مشروع 3"
-                style="height: 270px; object-fit: cover"
-              />
+            <div class="col-6 col-sm-6">
+              <div class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp" data-wow-delay="0.4s">
+                <i class="fa fa-user-check fa-2x text-warning" style="color: var(--secondary)"></i>
+                <span class="fw-bold">الالتزام</span>
+              </div>
             </div>
-          </div>
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.4s"
-            data-category="commercial"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-4"
-            >
-              <img
-                src="imgs/13.jpeg"
-                class="img-fluid w-100 h-100"
-                alt="مشروع 4"
-                style="height: 270px; object-fit: cover"
-              />
-            </div>
-          </div>
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.5s"
-            data-category="infrastructure"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-5"
-            >
-              <img
-                src="imgs/14.jpeg"
-                class="img-fluid w-100 h-100"
-                alt="مشروع 5"
-                style="height: 270px; object-fit: cover"
-              />
-            </div>
-          </div>
-          <div
-            class="col-md-4 wow fadeInUp project-item"
-            data-wow-delay="0.6s"
-            data-category="residential"
-          >
-            <div
-              class="project-img-card overflow-hidden rounded-2 project-hover-6"
-            >
-              <img
-                src="imgs/15.jpeg"
-                class="img-fluid w-100 h-100"
-                alt="مشروع 6"
-                style="height: 270px; object-fit: cover"
-              />
+            <div class="col-6 col-sm-6">
+              <div class="about-feature-card d-flex align-items-center gap-3 mb-2 wow fadeInUp" data-wow-delay="0.45s">
+                <i class="fa fa-users fa-2x text-warning" style="color: var(--secondary)"></i>
+                <span class="fw-bold">فريق محترف</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="text-center wow fadeInUp" data-wow-delay="0.7s">
-          <a
-            href="#"
-            class="btn btn-warning px-5 py-2 text-white fw-bold"
-            style="background: var(--secondary); border: none"
-            >عرض كل المشاريع</a
-          >
+        <!-- العمود الأيسر: قيمنا -->
+        <div class="col-lg-6">
+          <div class="mb-3 text-secondary wow fadeInUp" data-wow-delay="0.15s" style="letter-spacing: 1px">
+            قيمنا
+          </div>
+          <h3 class="fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">
+            ما يميزنا في العمل
+          </h3>
+          <p class="mb-4 text-muted fs-6 wow fadeInUp" data-wow-delay="0.25s">
+            نلتزم بمجموعة من القيم التي تضمن لعملائنا أعلى مستويات الجودة
+            والثقة في كل مشروع.
+          </p>
+          <div class="accordion" id="valuesAccordion">
+            <div class="accordion-item mb-2 wow fadeInUp" data-wow-delay="0.3s">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button w-100 fw-bold text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                  style="color: var(--secondary)">
+                  <span>الأمان</span>
+                  <span class="accordion-arrow me-auto d-flex align-items-center justify-content-center">
+                    <i class="fa fa-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#valuesAccordion">
+                <div class="accordion-body">
+                  نحرص على تطبيق أعلى معايير الأمان في جميع مراحل العمل، لضمان
+                  سلامة الجميع وجودة التنفيذ.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-2 wow fadeInUp" data-wow-delay="0.35s">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                  style="color: var(--secondary)">
+                  خدمة العملاء
+                  <span class="accordion-arrow me-auto d-flex align-items-center justify-content-center">
+                    <i class="fa fa-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#valuesAccordion">
+                <div class="accordion-body">
+                  رضا العميل هو أولويتنا، ونعمل دائمًا على تلبية احتياجاته
+                  وتقديم الدعم الكامل في كل خطوة.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                  style="color: var(--secondary)">
+                  النزاهة
+                  <span class="accordion-arrow me-auto d-flex align-items-center justify-content-center">
+                    <i class="fa fa-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#valuesAccordion">
+                <div class="accordion-body">
+                  نلتزم بالشفافية والمصداقية في جميع تعاملاتنا، ونضع ثقة
+                  عملائنا فوق كل اعتبار.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- سكشن المشاريع الأخيرة End -->
+  </div>
+  <!-- سكشن تعريفي وقيم الشركة End -->
 
-    <!-- سكشن اتصل بنا Start -->
-    <section id="contact-section" class="contact-section position-relative py-5 animate-on-scroll">
-      <div class="contact-bg position-absolute top-0 start-0 w-100 h-100"></div>
-      <div class="container position-relative" style="z-index:2;">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 animate-on-scroll d-flex flex-column align-items-start justify-content-center">
-            <img src="imgs/ps3.jpeg" alt="Power Steel Homs Logo" class="contact-logo mb-3 d-none d-lg-block animate-on-scroll" style="max-width:160px; width:100%; height:auto; border-radius:22px; box-shadow:0 4px 24px #f15f0055; background:#fff;" />
-            <h2 class="fw-bold mb-3 text-white">نحن هنا لمساعدتك في أي وقت</h2>
-            <p class="mb-4 text-light fs-6">إذا كان لديك أي استفسار أو ترغب في معرفة المزيد عن خدماتنا، لا تتردد في التواصل معنا عبر النموذج أو الهاتف أو البريد الإلكتروني.</p>
-            <div class="contact-info-list w-100 mb-3 animate-on-scroll">
-              <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
+  <!-- سكشن المشاريع الأخيرة Start -->
+  <div class="container-xxl pb-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="text-secondary fw-bold wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 1px">عمل
+          متميز</span>
+        <h2 class="fw-bold my-3 wow fadeInUp" data-wow-delay="0.2s">
+          مشاريعنا الأخيرة
+        </h2>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+        <button class="btn btn-warning text-white fw-bold px-4 py-2 active filter-btn" data-filter="all"
+          style="background: var(--secondary); border: none">
+          الكل
+        </button>
+        <button class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn" data-filter="commercial"
+          style="color: var(--secondary); border-color: var(--secondary)">
+          تجاري
+        </button>
+        <button class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn" data-filter="infrastructure"
+          style="color: var(--secondary); border-color: var(--secondary)">
+          بنية تحتية
+        </button>
+        <button class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn" data-filter="residential"
+          style="color: var(--secondary); border-color: var(--secondary)">
+          سكني
+        </button>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.1s" data-category="commercial">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-1">
+            <img src="imgs/10.jpeg" class="img-fluid w-100 h-100 rounded-2" alt="مشروع 1"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.2s" data-category="infrastructure">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-2">
+            <img src="imgs/11.jpeg" class="img-fluid w-100 h-100 rounded-2" alt="مشروع 2"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.3s" data-category="residential">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-3">
+            <img src="imgs/12.jpeg" class="img-fluid w-100 h-100" alt="مشروع 3"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.4s" data-category="commercial">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-4">
+            <img src="imgs/13.jpeg" class="img-fluid w-100 h-100" alt="مشروع 4"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.5s" data-category="infrastructure">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-5">
+            <img src="imgs/14.jpeg" class="img-fluid w-100 h-100" alt="مشروع 5"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp project-item" data-wow-delay="0.6s" data-category="residential">
+          <div class="project-img-card overflow-hidden rounded-2 project-hover-6">
+            <img src="imgs/15.jpeg" class="img-fluid w-100 h-100" alt="مشروع 6"
+              style="height: 270px; object-fit: cover" />
+          </div>
+        </div>
+      </div>
+      <div class="text-center wow fadeInUp" data-wow-delay="0.7s">
+        <a href="#" class="btn btn-warning px-5 py-2 text-white fw-bold"
+          style="background: var(--secondary); border: none">عرض كل المشاريع</a>
+      </div>
+    </div>
+  </div>
+  <!-- سكشن المشاريع الأخيرة End -->
+
+  <!-- سكشن اتصل بنا Start -->
+  <section id="contact-section" class="contact-section position-relative py-5 animate-on-scroll">
+    <div class="contact-bg position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container position-relative" style="z-index:2;">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 animate-on-scroll d-flex flex-column align-items-start justify-content-center">
+          <img src="imgs/ps.png" alt="Power Steel Homs Logo"
+            class="contact-logo mb-3 d-none d-lg-block animate-on-scroll"
+            style="max-width:200px; width:100%; height:auto; " />
+          <h2 class="fw-bold mb-3 text-white">نحن هنا لمساعدتك في أي وقت</h2>
+          <p class="mb-4 text-light fs-6">إذا كان لديك أي استفسار أو ترغب في معرفة المزيد عن خدماتنا، لا تتردد في
+            التواصل معنا عبر النموذج أو الهاتف أو البريد الإلكتروني.</p>
+          <div class="contact-info-list w-100 mb-3 animate-on-scroll">
+                <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
+              <i class="fa fa-user-shield text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
+              <span class="fw-bold text-white">المدير العام:</span>
+              <a href="tel:+963984000717" class="text-white text-decoration-none contact-link"><span style="direction: ltr; unicode-bidi: embed;">+963 984 000 717</span></a>
+            </div>
+                <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
+              <i class="fa fa-hard-hat text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
+              <span class="fw-bold text-white">المدير التنفيذي:</span>
+              <a href="tel:+963989104160" class="text-white text-decoration-none contact-link"><span style="direction: ltr; unicode-bidi: embed;">+963 989 104 160</span></a>
+            </div>
+                  <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
+              <i class="fa fa-user-tie text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
+              <span class="fw-bold text-white">مدير الحسابات:</span>
+              <a href="tel:+963989104161" class="text-white text-decoration-none contact-link"><span style="direction: ltr; unicode-bidi: embed;">+963 989 104 161</span></a>
+            </div>
+            <div class="contact-info-item mb-2 d-flex flex-column gap-2">
+              <div class="d-flex align-items-center gap-2">
                 <i class="fa fa-headset text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
-                <span class="fw-bold text-white">خدمة العملاء:</span>
-                <a href="tel:+963989104161" class="text-white text-decoration-none contact-link">+963 989 104 161</a>
+                <span class="fw-bold text-white">خدمة العملاء</span>
               </div>
-              <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
-                <i class="fa fa-user-tie text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
-                <span class="fw-bold text-white">مدير الحسابات (محاسب الشركة):</span>
-                <a href="tel:+963989104161" class="text-white text-decoration-none contact-link">+963 989 104 161</a>
+              <div class="d-flex align-items-center gap-2 pe-4">
+                <i class="fa fa-phone-alt text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
+                <a href="tel:+963989104161" class="text-white text-decoration-none contact-link"><span style="direction: ltr; unicode-bidi: embed;">+963 989 104 161</span></a>
               </div>
-              <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
-                <i class="fa fa-hard-hat text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
-                <span class="fw-bold text-white">المدير التنفيذي للمشاريع:</span>
-                <a href="tel:+963989104160" class="text-white text-decoration-none contact-link">+963 989 104 160</a>
-              </div>
-              <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
-                <i class="fa fa-user-shield text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
-                <span class="fw-bold text-white">المدير العام:</span>
-                <a href="tel:+963984000717" class="text-white text-decoration-none contact-link">+963 984 000 717</a>
-              </div>
-              <div class="contact-info-item mb-2 d-flex align-items-center gap-2">
+              <div class="d-flex align-items-center gap-2 pe-4">
                 <i class="fa fa-envelope text-warning" style="font-size:1.3rem;color:var(--secondary) !important;"></i>
-                <span class="fw-bold text-white">إيميل خدمة العملاء:</span>
                 <a href="mailto:contact@power-steel.com.sy" class="text-white text-decoration-none contact-link">contact@power-steel.com.sy</a>
               </div>
             </div>
+      
+        
+      
           </div>
-          <div class="col-lg-6 animate-on-scroll">
-            <form class="contact-form bg-dark p-4 rounded-3 shadow-lg">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <input type="text" class="form-control contact-input" placeholder="اسمك" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="email" class="form-control contact-input" placeholder="البريد الإلكتروني" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control contact-input" placeholder="رقم الهاتف" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control contact-input" placeholder="نوع الخدمة" required>
-                </div>
-                <div class="col-12">
-                  <textarea class="form-control contact-input" rows="4" placeholder="رسالتك" required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-warning w-100 py-3 fw-bold text-white" style="background:var(--secondary);border:none;">إرسال الرسالة</button>
-                </div>
+        </div>
+        <div class="col-lg-6 animate-on-scroll">
+          <form class="contact-form bg-transparent p-4 rounded-3 shadow-lg">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control contact-input" placeholder="اسمك" required>
               </div>
-            </form>
-          </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control contact-input" placeholder="البريد الإلكتروني" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control contact-input" placeholder="رقم الهاتف" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control contact-input" placeholder="نوع الخدمة" required>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control contact-input" rows="4" placeholder="رسالتك" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-warning w-100 py-3 fw-bold text-white"
+                  style="background:var(--secondary);border:none;">إرسال الرسالة</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
-    <!-- سكشن اتصل بنا End -->
+    </div>
+  </section>
+  <!-- سكشن اتصل بنا End -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark footer  pt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h1 class="text-white mb-4">
-              <img src="imgs/logo.png" alt="logo" style="width: 180px" />
-            </h1>
-            <p>
-              نحن نقدم خدمات متكاملة في مجال الإنشاءات المعدنية. خبرتنا الطويلة
-              في المجال تجعلنا الخيار الأمثل لمشاريعكم
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-outline-primary ms-1" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square btn-outline-primary ms-1" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square btn-outline-primary ms-1" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square btn-outline-primary ms-1" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">العنوان</h4>
-            <p>
-              <i class="fa fa-map-marker-alt ms-3"></i>
-              المملكة العربية السعودية
-            </p>
-            <p><i class="fa fa-phone-alt ms-3"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope ms-3"></i>info@example.com</p>
-          </div>
-          <div class="col-lg-3 text-end col-md-6">
-            <h4 class="text-light mb-4">روابط سريعة</h4>
-            <a class="btn btn-link text-end" href="">من نحن</a>
-            <a class="btn btn-link text-end" href="">اتصل بنا</a>
-            <a class="btn btn-link text-end" href="">خدماتنا</a>
-            <a class="btn btn-link text-end" href="">الشروط والأحكام</a>
-            <a class="btn btn-link text-end" href="">الدعم</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">النشرة البريدية</h4>
-            <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input
-                class="form-control bg-transparent w-100 py-3 pe-4 ps-5"
-                type="text"
-                placeholder="بريدك الإلكتروني"
-              />
-              <button
-                type="button"
-                class="btn btn-primary py-2 position-absolute top-0 start-0 mt-2 ms-2"
-              >
-                اشتراك
-              </button>
-            </div>
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark footer  pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h1 class="text-white mb-4">
+            <img src="imgs/logo.png" alt="logo" style="width: 180px" />
+          </h1>
+          <p>
+            نحن نقدم خدمات متكاملة في مجال الإنشاءات المعدنية. خبرتنا الطويلة
+            في المجال تجعلنا الخيار الأمثل لمشاريعكم
+          </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-square btn-outline-primary ms-1" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square btn-outline-primary ms-1" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square btn-outline-primary ms-1" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-square btn-outline-primary ms-1" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-      </div>
-      <div class="container-fluid copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              جميع الحقوق محفوظة &copy;
-              <a href="#" class="fs-5"
-                ><span style="color: var(--primary)" class="fw-bold"
-                  >Power</span
-                >
-                <span style="color: var(--secondary)">Steel Home</span>
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">العنوان</h4>
+          <p>
+            <i class="fa fa-map-marker-alt ms-3"></i>
+            المملكة العربية السعودية
+          </p>
+          <p><i class="fa fa-phone-alt ms-3 align-left"></i><span style="direction: ltr; unicode-bidi: embed;">+963 989 104 161</span></p>
+          <p><i class="fa fa-envelope ms-3"></i>contact@power-steel.com.sy</p>
+        </div>
+        <div class="col-lg-3 text-end col-md-6">
+          <h4 class="text-light mb-4">روابط سريعة</h4>
+          <a class="btn btn-link text-end" href="services.html">خدماتنا</a>
+          <a class="btn btn-link text-end" href="sections.html">الأقسام</a>
+          <a class="btn btn-link text-end" href="index.html#about-section">من نحن</a>
+          <a class="btn btn-link text-end" href="index.html#contact-section">اتصل بنا</a>
+          <!-- <a class="btn btn-link text-end" href="">الشروط والأحكام</a> -->
+          <!-- <a class="btn btn-link text-end" href="">الدعم</a> -->
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">النشرة البريدية</h4>
+          <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+          <div class="position-relative mx-auto" style="max-width: 400px">
+            <input class="form-control bg-transparent w-100 py-3 pe-4 ps-5" type="text"
+              placeholder="بريدك الإلكتروني" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 start-0 mt-2 ms-2">
+              اشتراك
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+    <div class="container-fluid text-center copyright">
+        <div class="row text-center">
+          <div class=" mb-3 mb-md-0">
+            جميع الحقوق محفوظة &copy;
+            <a href="#" class="fs-5"><span style="color: var(--primary)" class="fw-bold">Power</span>
+              <span style="color: var(--secondary)">Steel Home</span>
+            </a>
+          </div>
+        </div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+    </div>
+  </div>
+  <!-- Footer End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+  style="background:var(--primary);"
+  ><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>

@@ -33,176 +33,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-
-    <style>
-      .card-service {
-        background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.04);
-        transition: box-shadow 0.3s cubic-bezier(0.4, 2, 0.6, 1),
-          transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
-        will-change: box-shadow, transform;
-        padding: 18px 10px 10px 10px;
-        margin-bottom: 0;
-        cursor: pointer;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .card-service::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          45deg,
-          var(--secondary) 0%,
-          transparent 100%
-        );
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 1;
-      }
-
-      .card-service:hover {
-        box-shadow: 0 8px 24px 0 #ffc30c44, 0 1.5px 8px 0 #ff980044;
-        transform: translateY(-6px) scale(1.045);
-        z-index: 2;
-      }
-
-      .card-service:hover::before {
-        opacity: 0.05;
-      }
-
-      .card-service .all-services-icon {
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
-      }
-
-      .card-service:hover .all-services-icon {
-        transform: scale(1.2);
-        color: var(--secondary) !important;
-      }
-
-      .card-service h5 {
-        position: relative;
-        padding-bottom: 10px;
-        transition: all 0.3s ease;
-        z-index: 2;
-      }
-
-      .card-service h5::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background: var(--secondary);
-        transition: width 0.3s ease;
-      }
-
-      .card-service:hover h5::after {
-        width: 50px;
-      }
-
-      .card-service p {
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
-      }
-
-      .card-service:hover p {
-        color: #666 !important;
-      }
-
-      .card-service .btn-link {
-        position: relative;
-        z-index: 2;
-        transition: all 0.3s ease;
-      }
-
-      .card-service:hover .btn-link {
-        color: var(--secondary) !important;
-        transform: translateX(-5px);
-      }
-
-      .service-details {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-        background: #f8f9fa;
-        border-radius: 0 0 14px 14px;
-        margin: 0 -10px -10px -10px;
-      }
-
-      .service-details.active {
-        max-height: 1000px;
-      }
-
-      .service-details-content {
-        padding: 20px;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-      }
-
-      .service-details.active .service-details-content {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .service-details h6 {
-        color: var(--secondary);
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .service-details ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .service-details ul li {
-        margin-bottom: 10px;
-        padding-right: 20px;
-        position: relative;
-      }
-
-      .service-details ul li::before {
-        content: "•";
-        color: var(--secondary);
-        position: absolute;
-        right: 0;
-      }
-
-      .btn-link {
-        text-decoration: none;
-        position: relative;
-        z-index: 2;
-        transition: all 0.3s ease;
-      }
-
-      .btn-link i {
-        transition: transform 0.3s ease;
-      }
-
-      .btn-link.active i {
-        transform: rotate(180deg);
-      }
-
-      @media (max-width: 768px) {
-        .service-details-content {
-          padding: 15px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -259,14 +89,14 @@
             >الأقسام</a
           >
           <a
-            href="about.html"
+            href="index.html#about-section"
             class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
             data-wow-delay="0.4s"
             data-i18n="nav.about"
             >من نحن</a
           >
           <a
-            href="contact.html"
+            href="index.html#contact-section"
             class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
             data-wow-delay="0.5s"
             data-i18n="nav.contact"
@@ -279,24 +109,6 @@
               <span class="lang-text">EN</span>
             </button>
           </div>
-          <!-- <div class="search-wrapper d-flex align-items-center">
-            <div class="search-container">
-              <button class="btn btn-link search-toggle" type="button">
-                <i class="fas fa-search"></i>
-              </button>
-              <div class="search-box">
-                <input
-                  type="text"
-                  class="form-control"
-                  data-i18n-placeholder="search.placeholder"
-                  placeholder="ابحث هنا..."
-                />
-                <button class="btn btn-primary search-btn">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </nav>
@@ -307,7 +119,7 @@
       class="container-fluid page-header py-5 mb-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
-      <div class="container py-5">
+      <div class="container text-center py-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">خدماتنا</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <!-- <ol class="breadcrumb text-uppercase mb-0">
@@ -556,14 +368,14 @@
 
     <!-- Footer Start -->
     <div
-      class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
+      class="container-fluid bg-dark footer pt-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h1 class="text-white mb-4">
-              <img src="imgs/Dn.png" alt="logo" style="width: 180px" />
+              <img src="imgs/logo.png" alt="logo" style="width: 180px" />
             </h1>
             <p>
               نحن نقدم خدمات متكاملة في مجال الإنشاءات المعدنية. خبرتنا الطويلة
@@ -590,16 +402,26 @@
               <i class="fa fa-map-marker-alt ms-3"></i>
               المملكة العربية السعودية
             </p>
-            <p><i class="fa fa-phone-alt ms-3"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope ms-3"></i>info@example.com</p>
+            <p>
+              <i class="fa fa-phone-alt ms-3 align-left"></i
+              ><span style="direction: ltr; unicode-bidi: embed"
+                >+963 989 104 161</span
+              >
+            </p>
+            <p><i class="fa fa-envelope ms-3"></i>contact@power-steel.com.sy</p>
           </div>
           <div class="col-lg-3 text-end col-md-6">
             <h4 class="text-light mb-4">روابط سريعة</h4>
-            <a class="btn btn-link text-end" href="">من نحن</a>
-            <a class="btn btn-link text-end" href="">اتصل بنا</a>
-            <a class="btn btn-link text-end" href="">خدماتنا</a>
-            <a class="btn btn-link text-end" href="">الشروط والأحكام</a>
-            <a class="btn btn-link text-end" href="">الدعم</a>
+            <a class="btn btn-link text-end" href="services.html">خدماتنا</a>
+            <a class="btn btn-link text-end" href="sections.html">الأقسام</a>
+            <a class="btn btn-link text-end" href="index.html#about-section"
+              >من نحن</a
+            >
+            <a class="btn btn-link text-end" href="index.html#contact-section"
+              >اتصل بنا</a
+            >
+            <!-- <a class="btn btn-link text-end" href="">الشروط والأحكام</a> -->
+            <!-- <a class="btn btn-link text-end" href="">الدعم</a> -->
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">النشرة البريدية</h4>
@@ -620,18 +442,14 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              جميع الحقوق محفوظة &copy;
-              <a href="#" class="fs-5"
-                ><span style="color: var(--primary)" class="fw-bold"
-                  >Power</span
-                >
-                <span style="color: var(--secondary)">Steel Home</span>
-              </a>
-            </div>
+      <div class="container-fluid text-center copyright">
+        <div class="row text-center">
+          <div class="mb-3 mb-md-0">
+            جميع الحقوق محفوظة &copy;
+            <a href="#" class="fs-5"
+              ><span style="color: var(--primary)" class="fw-bold">Power</span>
+              <span style="color: var(--secondary)">Steel Home</span>
+            </a>
           </div>
         </div>
       </div>
@@ -639,7 +457,10 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      style="background: var(--primary)"
       ><i class="bi bi-arrow-up"></i
     ></a>
 

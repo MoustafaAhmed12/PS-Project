@@ -65,14 +65,14 @@
             >الأقسام</a
           >
           <a
-            href="about.html"
+            href="index.html#about-section"
             class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
             data-wow-delay="0.4s"
             data-i18n="nav.about"
             >من نحن</a
           >
           <a
-            href="contact.html"
+            href="index.html#contact-section"
             class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
             data-wow-delay="0.5s"
             data-i18n="nav.contact"
@@ -92,7 +92,7 @@
 
     <!-- Page Header Start -->
     <div class="container-fluid sections-page-header py-5 mb-5">
-      <div class="container py-5">
+      <div class="container text-center py-5">
         <h1 class="display-3 text-white mb-3">الأقسام</h1>
       </div>
     </div>
@@ -113,7 +113,7 @@
             مجال المنشآت المعدنية، من التصميم حتى التنفيذ والتسليم.
           </p>
         </div>
-        <div class="row g-4">
+        <div class="row text-center g-4">
           <!-- القسم 1 -->
           <div class="col-lg-4 col-md-6">
             <div class="section-card">
@@ -204,12 +204,15 @@
     <!-- Sections End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 pt-5">
+    <div
+      class="container-fluid bg-dark footer pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h1 class="text-white mb-4">
-              <img src="imgs/Dn.png" alt="logo" style="width: 180px" />
+              <img src="imgs/logo.png" alt="logo" style="width: 180px" />
             </h1>
             <p>
               نحن نقدم خدمات متكاملة في مجال الإنشاءات المعدنية. خبرتنا الطويلة
@@ -233,18 +236,29 @@
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">العنوان</h4>
             <p>
-              <i class="fa fa-map-marker-alt ms-3"></i> المملكة العربية السعودية
+              <i class="fa fa-map-marker-alt ms-3"></i>
+              المملكة العربية السعودية
             </p>
-            <p><i class="fa fa-phone-alt ms-3"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope ms-3"></i>info@example.com</p>
+            <p>
+              <i class="fa fa-phone-alt ms-3 align-left"></i
+              ><span style="direction: ltr; unicode-bidi: embed"
+                >+963 989 104 161</span
+              >
+            </p>
+            <p><i class="fa fa-envelope ms-3"></i>contact@power-steel.com.sy</p>
           </div>
           <div class="col-lg-3 text-end col-md-6">
             <h4 class="text-light mb-4">روابط سريعة</h4>
-            <a class="btn btn-link text-end" href="about.html">من نحن</a>
-            <a class="btn btn-link text-end" href="contact.html">اتصل بنا</a>
             <a class="btn btn-link text-end" href="services.html">خدماتنا</a>
-            <a class="btn btn-link text-end" href="#">الشروط والأحكام</a>
-            <a class="btn btn-link text-end" href="#">الدعم</a>
+            <a class="btn btn-link text-end" href="sections.html">الأقسام</a>
+            <a class="btn btn-link text-end" href="index.html#about-section"
+              >من نحن</a
+            >
+            <a class="btn btn-link text-end" href="index.html#contact-section"
+              >اتصل بنا</a
+            >
+            <!-- <a class="btn btn-link text-end" href="">الشروط والأحكام</a> -->
+            <!-- <a class="btn btn-link text-end" href="">الدعم</a> -->
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">النشرة البريدية</h4>
@@ -265,18 +279,14 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              جميع الحقوق محفوظة &copy;
-              <a href="#" class="fs-5"
-                ><span style="color: var(--primary)" class="fw-bold"
-                  >Power</span
-                >
-                <span style="color: var(--secondary)">Steel Home</span></a
-              >
-            </div>
+      <div class="container-fluid text-center copyright">
+        <div class="row text-center">
+          <div class="mb-3 mb-md-0">
+            جميع الحقوق محفوظة &copy;
+            <a href="#" class="fs-5"
+              ><span style="color: var(--primary)" class="fw-bold">Power</span>
+              <span style="color: var(--secondary)">Steel Home</span>
+            </a>
           </div>
         </div>
       </div>
@@ -284,7 +294,10 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      style="background: var(--primary)"
       ><i class="bi bi-arrow-up"></i
     ></a>
 
