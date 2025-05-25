@@ -14,7 +14,7 @@ body {
 }
 
 .carousel-inner {
-  height: calc(100vh - 110px) !important;
+  height: calc(100vh - 190px) !important;
 }
 
 .carousel-item {
@@ -107,34 +107,36 @@ body {
   position: relative;
   color: #333 !important;
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem !important;
+  margin: 0 1rem;
+  padding: 0.5rem 0rem !important;
 }
 
 .navbar .nav-link::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 0;
   height: 2px;
   background: var(--secondary);
   transition: all 0.3s ease;
 }
 
-.navbar .nav-link:hover::before {
-  width: 70%;
+.navbar .nav-link:hover::before,
+.navbar .nav-link.active::before {
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: var(--secondary);
 }
 
 /* تنسيق الرابط النشط */
 .navbar .nav-link.active {
   color: var(--secondary) !important;
   font-weight: 700;
-}
-
-.navbar .nav-link.active::before {
-  width: 70%;
-  background: var(--secondary);
 }
 
 .navbar .nav-link.active::after {
@@ -159,17 +161,6 @@ body {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(var(--secondary-rgb), 0);
-  }
-}
-
-/* تحسينات للتوافق مع الشاشات الصغيرة */
-@media (max-width: 991.98px) {
-  .navbar .nav-link::before {
-    bottom: 0;
-  }
-
-  .navbar .nav-link.active::after {
-    bottom: -2px;
   }
 }
 
@@ -244,17 +235,38 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-nav {
+  .navbar .navbar-nav {
+    margin-top: 12px !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     margin-bottom: 1rem;
   }
   .navbar .navbar-nav .nav-link {
+    padding: 12px 0px !important;
+    width: fit-content;
+    font-size: 1.1rem;
+    text-align: right;
     margin-left: 0;
-    padding: 10px 0;
   }
-
-  .navbar .navbar-nav {
-    margin-top: 25px;
-    border-top: 1px solid #eeeeee;
+  .navbar .navbar-brand img,
+  .navbar-brand .logo-img {
+    width: 48px !important;
+    height: auto !important;
+  }
+  .language-toggle {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .language-toggle .btn {
+    padding: 0.2rem 0.7rem;
+    font-size: 1rem;
+  }
+  .navbar-collapse {
+    margin-top: 10px !important;
+    background: #fff;
+    box-shadow: 0 8px 32px 0 rgba(24, 35, 51, 0.12);
+    padding: 0 1rem 1rem 1rem;
   }
 }
 
@@ -276,9 +288,9 @@ body {
 
 @media (max-width: 768px) {
   .logo-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 8px;
-    padding: 2px 15px;
+    padding: 2px 4px;
     margin-bottom: 1.5rem;
   }
 }
@@ -287,7 +299,7 @@ body {
 
 /* تحديث أنماط الكاروسيل */
 .carousel-caption {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 190px);
   top: 0;
   display: flex;
   align-items: center;
@@ -1706,4 +1718,22 @@ body {
 [dir="ltr"] .border-end {
   border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
   border-right: none !important;
+}
+
+/* Accordion for service details */
+.service-details {
+  display: none;
+  transition: all 0.3s;
+}
+.service-details.active {
+  display: block;
+  animation: fadeInUp 0.5s;
+}
+
+.read-more-btn i {
+  transition: transform 0.3s;
+}
+.read-more-btn.active i,
+.read-more-btn i.active {
+  transform: rotate(180deg);
 }
