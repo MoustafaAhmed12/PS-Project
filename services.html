@@ -89,6 +89,13 @@
             >الأقسام</a
           >
           <a
+            href="project.html"
+            class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
+            data-wow-delay="0.6s"
+            data-i18n="nav.projects"
+            >كل المشاريع</a
+          >
+          <a
             href="index.html#about-section"
             class="nav-item nav-link fw-bold px-3 animate__animated animate__fadeInDown"
             data-wow-delay="0.4s"
@@ -186,11 +193,8 @@
             data-category="commercial"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-layer-group fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-layer-group fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تصنيع وتركيب المباني المختلطة</h5>
               <p class="text-muted">
@@ -229,11 +233,8 @@
             data-category="industrial"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-warehouse fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-warehouse fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تصنيع هنكارات وأسقف معدنية</h5>
               <p class="text-muted">
@@ -272,11 +273,8 @@
             data-category="industrial"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-oil-can fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-oil-can fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تصنيع خزانات معدنية</h5>
               <p class="text-muted">
@@ -293,11 +291,8 @@
             data-category="industrial"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-industry fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-industry fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تصنيع مباني معدنية للمكنات</h5>
               <p class="text-muted">
@@ -314,11 +309,8 @@
             data-category="industrial"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-flask fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-flask fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تجهيز وتركيب معامل</h5>
               <p class="text-muted">
@@ -335,11 +327,8 @@
             data-category="residential"
           >
             <div class="card-service pb-3">
-              <div class="mb-4">
-                <i
-                  class="fa fa-tools fa-2x all-services-icon"
-                  style="color: var(--secondary)"
-                ></i>
+              <div class="mb-4 services-icon">
+                <i class="fa fa-tools fa-2x"></i>
               </div>
               <h5 class="fw-bold mb-2">تصنيع الأعمال المعدنية</h5>
               <p class="text-muted">
@@ -407,8 +396,7 @@
             <a class="btn btn-link text-end" href="index.html#contact-section"
               >اتصل بنا</a
             >
-            <!-- <a class="btn btn-link text-end" href="">الشروط والأحكام</a> -->
-            <!-- <a class="btn btn-link text-end" href="">الدعم</a> -->
+            <a class="btn btn-link text-end" href="project.html">كل المشاريع</a>
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">النشرة البريدية</h4>
@@ -422,6 +410,11 @@
               <button
                 type="button"
                 class="btn btn-primary py-2 position-absolute top-0 start-0 mt-2 ms-2"
+                style="
+                  background: var(--secondary);
+                  border: none;
+                  border-radius: 4px;
+                "
               >
                 اشتراك
               </button>
@@ -447,8 +440,12 @@
     <a
       href="#"
       class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      style="background: var(--primary)"
-      ><i class="bi bi-arrow-up"></i
+      style="
+        background: var(--primary);
+        border: 1px solid var(--secondary);
+        border-radius: 4px;
+      "
+      ><i class="bi bi-arrow-up" style="color: #fff !important"></i
     ></a>
 
     <!-- JavaScript Libraries -->

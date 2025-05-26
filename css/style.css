@@ -270,6 +270,10 @@ body {
   }
 }
 
+i {
+  color: var(--secondary) !important;
+}
+
 .logo-title {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
@@ -288,7 +292,7 @@ body {
 
 @media (max-width: 768px) {
   .logo-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     letter-spacing: 8px;
     padding: 2px 4px;
     margin-bottom: 1.5rem;
@@ -957,7 +961,7 @@ body {
 }
 
 .service-type-card:hover .service-icon i {
-  color: #fff;
+  color: #fff !important;
   transform: rotateY(-180deg);
 }
 
@@ -1051,31 +1055,33 @@ body {
 }
 
 .btn-services i {
+  color: #fff !important;
   transition: all 0.3s ease;
 }
 
 .btn-services:hover i {
+  color: var(--secondary) !important;
   transform: translateX(-5px);
 }
 /* تأثير على أيقونات الخدمات عند الـ hover على الكارد بالكامل */
-.all-services-icon {
+.services-icon > i {
   transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1), color 0.3s,
-    filter 0.3s;
-  will-change: transform, color, filter;
-  position: relative;
-  z-index: 2;
+    filter 0.3s !important;
+  will-change: transform, color, filter !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
-.card-service:hover .all-services-icon {
-  transform: translateY(-32px) scale(1.25) rotate(-8deg);
+.card-service:hover .services-icon > i {
+  transform: translateY(-32px) scale(1.25) rotate(-8deg) !important;
   color: var(--primary) !important;
-  filter: drop-shadow(0 8px 24px var(--primary));
+  filter: drop-shadow(0 8px 24px var(--primary)) !important;
 }
 .card-service .mb-3 {
   position: relative;
   z-index: 1;
   margin-bottom: 0.5rem !important;
 }
-.card-service .all-services-icon {
+.card-service .services-icon > i {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 12px 0 #ffc30c22;
@@ -1094,7 +1100,7 @@ body {
   overflow: visible;
 }
 .card-service:hover {
-  box-shadow: 0 8px 32px 0 #ffc30c55, 0 1.5px 8px 0 #ff980055;
+  box-shadow: 0 8px 32px 0 var(--secondary), 0 1.5px 8px 0 #ff980055;
   transform: translateY(-8px) scale(1.035);
   z-index: 2;
 }
@@ -1115,7 +1121,7 @@ body {
   width: 40px;
   height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #ffc30c 60%, #ff9800 100%);
+  background: linear-gradient(90deg, var(--secondary) 60%, #ff9800 100%);
   opacity: 0.8;
 }
 .card-service p {
@@ -1191,7 +1197,7 @@ body {
 }
 
 .section-card:hover .section-icon i {
-  color: #fff;
+  color: #fff !important;
   transform: rotateY(-180deg);
 }
 
@@ -1279,10 +1285,12 @@ body {
 }
 
 .btn-sections i {
+  color: #fff !important;
   transition: all 0.3s ease;
 }
 
 .btn-sections:hover i {
+  color: var(--secondary) !important;
   transform: translateX(-5px);
 }
 
@@ -1588,7 +1596,7 @@ body {
 }
 
 .best-choice-card:hover {
-  box-shadow: 0 8px 32px 0 #ffc30c55, 0 1.5px 8px 0 #ff980055;
+  box-shadow: 0 8px 32px 0 var(--secondary), 0 1.5px 8px 0 #ff980055;
   transform: translateY(-8px) scale(1.035);
   z-index: 2;
 }
@@ -1607,7 +1615,7 @@ body {
 }
 
 .feature-card:hover {
-  box-shadow: 0 8px 24px 0 #ffc30c44, 0 1.5px 8px 0 #ff980044;
+  box-shadow: 0 8px 24px 0 var(--secondary), 0 1.5px 8px 0 #ff980044;
   transform: translateY(-6px) scale(1.045);
   z-index: 2;
 }

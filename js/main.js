@@ -76,79 +76,79 @@
 })(jQuery);
 
 // Translation resources
-const resources = {
-  ar: {
-    translation: {
-      nav: {
-        home: "الرئيسية",
-        services: "خدماتنا",
-        sections: "الأقسام",
-        about: "من نحن",
-        contact: "اتصل بنا",
-      },
-      topbar: {
-        phone: "+012 345 6789",
-        email: "info@example.com",
-        workingHours: "من الاثنين إلى الجمعة: 09 صباحاً - 09 مساءً",
-      },
-      carousel: {
-        title1: "الريادة في الإنشاءات المعدنية",
-        subtitle1: "نحول رؤيتك إلى واقع متميز",
-        description1:
-          "نقدم حلولاً متكاملة في مجال الإنشاءات المعدنية، مع التركيز على الجودة والابتكار والاستدامة. خبرتنا الواسعة تمكننا من تنفيذ مشاريع معقدة باحترافية عالية.",
-        button1: "تواصل معنا",
-        title2: "حلول صناعية متكاملة",
-        subtitle2: "نبتكر المستقبل معاً",
-        description2:
-          "نختص في تصميم وتنفيذ المنشآت الصناعية والمستودعات والمصانع. نضمن لك جودة عالية وأداء متميز مع التركيز على السلامة والكفاءة.",
-        button2: "خدماتنا",
-        title3: "مشاريع تجارية رائدة",
-        subtitle3: "نصنع الفرق في كل مشروع",
-        description3:
-          "نقدم حلولاً مبتكرة للمشاريع التجارية والسكنية. نتميز بالتصميم العصري والتنفيذ الدقيق، مع ضمان أعلى معايير الجودة والسلامة.",
-        button3: "مشاريعنا",
-      },
-    },
-  },
-  en: {
-    translation: {
-      nav: {
-        home: "Home",
-        services: "Services",
-        sections: "Sections",
-        about: "About Us",
-        contact: "Contact Us",
-      },
-      topbar: {
-        phone: "+012 345 6789",
-        email: "info@example.com",
-        workingHours: "Monday to Friday: 09 AM - 09 PM",
-      },
-      carousel: {
-        title1: "Leadership in Steel Construction",
-        subtitle1: "Transforming Your Vision into Excellence",
-        description1:
-          "We provide integrated solutions in steel construction, focusing on quality, innovation, and sustainability. Our extensive experience enables us to execute complex projects with high professionalism.",
-        button1: "Contact Us",
-        title2: "Integrated Industrial Solutions",
-        subtitle2: "Innovating the Future Together",
-        description2:
-          "We specialize in designing and implementing industrial facilities, warehouses, and factories. We guarantee high quality and excellent performance with a focus on safety and efficiency.",
-        button3: "Our Services",
-        title3: "Leading Commercial Projects",
-        subtitle3: "Making a Difference in Every Project",
-        description3:
-          "We offer innovative solutions for commercial and residential projects. We excel in modern design and precise execution, ensuring the highest standards of quality and safety.",
-        button3: "Our Projects",
-      },
-    },
-  },
-};
+// const resources = {
+//   ar: {
+//     translation: {
+//       nav: {
+//         home: "الرئيسية",
+//         services: "خدماتنا",
+//         sections: "الأقسام",
+//         about: "من نحن",
+//         contact: "اتصل بنا",
+//       },
+//       topbar: {
+//         phone: "+012 345 6789",
+//         email: "info@example.com",
+//         workingHours: "من الاثنين إلى الجمعة: 09 صباحاً - 09 مساءً",
+//       },
+//       carousel: {
+//         title1: "الريادة في الإنشاءات المعدنية",
+//         subtitle1: "نحول رؤيتك إلى واقع متميز",
+//         description1:
+//           "نقدم حلولاً متكاملة في مجال الإنشاءات المعدنية، مع التركيز على الجودة والابتكار والاستدامة. خبرتنا الواسعة تمكننا من تنفيذ مشاريع معقدة باحترافية عالية.",
+//         button1: "تواصل معنا",
+//         title2: "حلول صناعية متكاملة",
+//         subtitle2: "نبتكر المستقبل معاً",
+//         description2:
+//           "نختص في تصميم وتنفيذ المنشآت الصناعية والمستودعات والمصانع. نضمن لك جودة عالية وأداء متميز مع التركيز على السلامة والكفاءة.",
+//         button2: "خدماتنا",
+//         title3: "مشاريع تجارية رائدة",
+//         subtitle3: "نصنع الفرق في كل مشروع",
+//         description3:
+//           "نقدم حلولاً مبتكرة للمشاريع التجارية والسكنية. نتميز بالتصميم العصري والتنفيذ الدقيق، مع ضمان أعلى معايير الجودة والسلامة.",
+//         button3: "مشاريعنا",
+//       },
+//     },
+//   },
+//   en: {
+//     translation: {
+//       nav: {
+//         home: "Home",
+//         services: "Services",
+//         sections: "Sections",
+//         about: "About Us",
+//         contact: "Contact Us",
+//       },
+//       topbar: {
+//         phone: "+012 345 6789",
+//         email: "info@example.com",
+//         workingHours: "Monday to Friday: 09 AM - 09 PM",
+//       },
+//       carousel: {
+//         title1: "Leadership in Steel Construction",
+//         subtitle1: "Transforming Your Vision into Excellence",
+//         description1:
+//           "We provide integrated solutions in steel construction, focusing on quality, innovation, and sustainability. Our extensive experience enables us to execute complex projects with high professionalism.",
+//         button1: "Contact Us",
+//         title2: "Integrated Industrial Solutions",
+//         subtitle2: "Innovating the Future Together",
+//         description2:
+//           "We specialize in designing and implementing industrial facilities, warehouses, and factories. We guarantee high quality and excellent performance with a focus on safety and efficiency.",
+//         button3: "Our Services",
+//         title3: "Leading Commercial Projects",
+//         subtitle3: "Making a Difference in Every Project",
+//         description3:
+//           "We offer innovative solutions for commercial and residential projects. We excel in modern design and precise execution, ensuring the highest standards of quality and safety.",
+//         button3: "Our Projects",
+//       },
+//     },
+//   },
+// };
 
 // قراءة اللغة المختارة من localStorage أو استخدام العربية كافتراضي
 const savedLang = localStorage.getItem("siteLang") || "ar";
 i18next.init({
-  resources,
+  resources: window.siteTranslations,
   lng: savedLang,
   fallbackLng: "ar",
   interpolation: {
@@ -342,6 +342,47 @@ document.addEventListener("DOMContentLoaded", function () {
           target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectItems = document.querySelectorAll(".project-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // إزالة active و btn-warning من كل الأزرار وإزالة أي style
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("active", "btn-warning");
+        btn.classList.add("btn-outline-warning");
+        btn.style.border = "";
+        btn.style.background = "";
+        btn.style.color = "";
+      });
+      // إضافة active و btn-warning للزر الحالي فقط
+      this.classList.add("active", "btn-warning");
+      this.classList.remove("btn-outline-warning");
+
+      // إذا كان الزر الحالي هو زر الكل
+      if (this.getAttribute("data-filter") === "all") {
+        this.style.background = "var(--secondary)";
+        this.style.color = "#fff";
+        this.style.border = "none";
+      }
+
+      // الفلترة
+      const filterValue = this.getAttribute("data-filter");
+      projectItems.forEach((item) => {
+        if (
+          filterValue === "all" ||
+          item.getAttribute("data-category") === filterValue
+        ) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
     });
   });
 });

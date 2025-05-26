@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>كل المشاريع | Power Steel Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="imgs/logo.png" rel="icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-2 shadow-sm"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img
+          src="./imgs/logo.png"
+          alt="Power Steel Logo"
+          class="logo-img animate__animated animate__fadeInLeft"
+          style="width: 60px; height: auto"
+        />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler border-0"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+          <a href="index.html" class="nav-item nav-link fw-bold px-3"
+            >الرئيسية</a
+          >
+          <a href="services.html" class="nav-item nav-link fw-bold px-3"
+            >خدماتنا</a
+          >
+          <a href="sections.html" class="nav-item nav-link fw-bold px-3"
+            >الأقسام</a
+          >
+          <a
+            href="project.html"
+            class="nav-item nav-link active fw-bold px-3 animate__animated animate__fadeInDown"
+            data-wow-delay="0.6s"
+            data-i18n="nav.projects"
+            >كل المشاريع</a
+          >
+          <a
+            href="index.html#about-section"
+            class="nav-item nav-link fw-bold px-3"
+            >من نحن</a
+          >
+          <a
+            href="index.html#contact-section"
+            class="nav-item nav-link fw-bold px-3"
+            >اتصل بنا</a
+          >
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="language-toggle">
+            <button class="btn" onclick="toggleLanguage()">
+              <span class="lang-text">EN</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Page Header -->
+    <div
+      class="page-header d-flex align-items-center justify-content-center"
+      style="
+        height: 300px;
+        background: linear-gradient(
+            rgba(14, 80, 155, 0.7),
+            rgba(241, 95, 0, 0.7)
+          ),
+          url('imgs/10.jpeg') center/cover no-repeat;
+      "
+    >
+      <h1 class="text-white fw-bold display-4">كل المشاريع</h1>
+    </div>
+    <!-- Projects Filter Bar -->
+    <div class="container py-5">
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button
+          class="btn btn-warning text-white fw-bold px-4 py-2 active filter-btn"
+          data-filter="all"
+          style="background: var(--secondary); border: none"
+        >
+          الكل
+        </button>
+        <button
+          class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
+          data-filter="commercial"
+          style="color: var(--secondary); border-color: var(--secondary)"
+        >
+          تجاري
+        </button>
+        <button
+          class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
+          data-filter="infrastructure"
+          style="color: var(--secondary); border-color: var(--secondary)"
+        >
+          بنية تحتية
+        </button>
+        <button
+          class="btn btn-outline-warning fw-bold px-4 py-2 filter-btn"
+          data-filter="residential"
+          style="color: var(--secondary); border-color: var(--secondary)"
+        >
+          سكني
+        </button>
+      </div>
+      <div class="row mb-4" id="projects-gallery">
+        <!-- Project Items (copy from index.html, add more as needed) -->
+        <div class="col-md-4 mb-4 project-item" data-category="commercial">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-1"
+          >
+            <img
+              src="imgs/10.jpeg"
+              class="img-fluid w-100 h-100 rounded-2"
+              alt="مشروع تجاري 1"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-item" data-category="infrastructure">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-2"
+          >
+            <img
+              src="imgs/11.jpeg"
+              class="img-fluid w-100 h-100 rounded-2"
+              alt="مشروع بنية تحتية 1"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-item" data-category="residential">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-3"
+          >
+            <img
+              src="imgs/12.jpeg"
+              class="img-fluid w-100 h-100"
+              alt="مشروع سكني 1"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-item" data-category="commercial">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-4"
+          >
+            <img
+              src="imgs/13.jpeg"
+              class="img-fluid w-100 h-100"
+              alt="مشروع تجاري 2"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-item" data-category="infrastructure">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-5"
+          >
+            <img
+              src="imgs/14.jpeg"
+              class="img-fluid w-100 h-100"
+              alt="مشروع بنية تحتية 2"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-item" data-category="residential">
+          <div
+            class="project-img-card overflow-hidden rounded-2 project-hover-6"
+          >
+            <img
+              src="imgs/15.jpeg"
+              class="img-fluid w-100 h-100"
+              alt="مشروع سكني 2"
+              style="height: 270px; object-fit: cover"
+            />
+          </div>
+        </div>
+        <!-- يمكنك إضافة المزيد من المشاريع هنا بنفس النمط -->
+      </div>
+    </div>
+    <!-- Contact Section (copy from index.html) -->
+    <section
+      id="contact-section"
+      class="contact-section position-relative py-5 animate-on-scroll"
+    >
+      <div class="contact-bg position-absolute top-0 start-0 w-100 h-100"></div>
+      <div class="container position-relative" style="z-index: 2">
+        <div class="row align-items-center g-5">
+          <div
+            class="col-lg-6 animate-on-scroll d-flex flex-column align-items-start justify-content-center"
+          >
+            <img
+              src="imgs/ps.png"
+              alt="Power Steel Homs Logo"
+              class="contact-logo mb-3 animate-on-scroll"
+              style="max-width: 200px; width: 100%; height: auto"
+            />
+            <h2 class="fw-bold mb-3 text-white">نحن هنا لمساعدتك في أي وقت</h2>
+            <p class="mb-4 text-light fs-6">
+              إذا كان لديك أي استفسار أو ترغب في معرفة المزيد عن خدماتنا، لا
+              تتردد في التواصل معنا عبر النموذج أو الهاتف أو البريد الإلكتروني.
+            </p>
+            <div class="contact-info-list w-100 mb-3 animate-on-scroll">
+              <div
+                class="contact-info-item mb-2 d-flex align-items-center gap-2"
+              >
+                <i
+                  class="fa fa-user-shield text-warning"
+                  style="font-size: 1.3rem; color: var(--secondary) !important"
+                ></i>
+                <span class="fw-bold text-white">المدير العام:</span>
+                <a
+                  href="tel:+963984000717"
+                  class="text-white text-decoration-none contact-link"
+                  ><span style="direction: ltr; unicode-bidi: embed"
+                    >+963 984 000 717</span
+                  ></a
+                >
+              </div>
+              <div
+                class="contact-info-item mb-2 d-flex align-items-center gap-2"
+              >
+                <i
+                  class="fa fa-hard-hat text-warning"
+                  style="font-size: 1.3rem; color: var(--secondary) !important"
+                ></i>
+                <span class="fw-bold text-white">المدير التنفيذي:</span>
+                <a
+                  href="tel:+963989104160"
+                  class="text-white text-decoration-none contact-link"
+                  ><span style="direction: ltr; unicode-bidi: embed"
+                    >+963 989 104 160</span
+                  ></a
+                >
+              </div>
+              <div
+                class="contact-info-item mb-2 d-flex align-items-center gap-2"
+              >
+                <i
+                  class="fa fa-user-tie text-warning"
+                  style="font-size: 1.3rem; color: var(--secondary) !important"
+                ></i>
+                <span class="fw-bold text-white">مدير الحسابات:</span>
+                <a
+                  href="tel:+963989104161"
+                  class="text-white text-decoration-none contact-link"
+                  ><span style="direction: ltr; unicode-bidi: embed"
+                    >+963 989 104 161</span
+                  ></a
+                >
+              </div>
+              <div class="contact-info-item mb-2 d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i
+                    class="fa fa-headset text-warning"
+                    style="
+                      font-size: 1.3rem;
+                      color: var(--secondary) !important;
+                    "
+                  ></i>
+                  <span class="fw-bold text-white">خدمة العملاء</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-4">
+                  <i
+                    class="fa fa-phone-alt text-warning"
+                    style="
+                      font-size: 1.3rem;
+                      color: var(--secondary) !important;
+                    "
+                  ></i>
+                  <a
+                    href="tel:+963989104161"
+                    class="text-white text-decoration-none contact-link"
+                    ><span style="direction: ltr; unicode-bidi: embed"
+                      >+963 989 104 161</span
+                    ></a
+                  >
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-4">
+                  <i
+                    class="fa fa-envelope text-warning"
+                    style="
+                      font-size: 1.3rem;
+                      color: var(--secondary) !important;
+                    "
+                  ></i>
+                  <a
+                    href="mailto:contact@power-steel.com.sy"
+                    class="text-white text-decoration-none contact-link"
+                    >contact@power-steel.com.sy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 animate-on-scroll">
+            <form class="contact-form bg-transparent p-4 rounded-3 shadow-lg">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control contact-input"
+                    placeholder="اسمك"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control contact-input"
+                    placeholder="البريد الإلكتروني"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control contact-input"
+                    placeholder="رقم الهاتف"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control contact-input"
+                    placeholder="نوع الخدمة"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control contact-input"
+                    rows="4"
+                    placeholder="رسالتك"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-warning w-100 py-3 fw-bold text-white"
+                    style="background: var(--secondary); border: none"
+                  >
+                    إرسال الرسالة
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark footer pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h1 class="text-white mb-4">
+              <img src="imgs/logo.png" alt="logo" style="width: 180px" />
+            </h1>
+            <p>
+              نحن نقدم خدمات متكاملة في مجال الإنشاءات المعدنية. خبرتنا الطويلة
+              في المجال تجعلنا الخيار الأمثل لمشاريعكم
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-primary ms-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary ms-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary ms-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary ms-1" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">العنوان</h4>
+            <p><i class="fa fa-map-marker-alt ms-3"></i>سوريا - حمص</p>
+            <p>
+              <i class="fa fa-phone-alt ms-3 align-left"></i
+              ><span style="direction: ltr; unicode-bidi: embed"
+                >+963 989 104 161</span
+              >
+            </p>
+            <p><i class="fa fa-envelope ms-3"></i>contact@power-steel.com.sy</p>
+          </div>
+          <div class="col-lg-3 text-end col-md-6">
+            <h4 class="text-light mb-4">روابط سريعة</h4>
+            <a class="btn btn-link text-end" href="services.html">خدماتنا</a>
+            <a class="btn btn-link text-end" href="sections.html">الأقسام</a>
+            <a class="btn btn-link text-end" href="index.html#about-section"
+              >من نحن</a
+            >
+            <a class="btn btn-link text-end" href="index.html#contact-section"
+              >اتصل بنا</a
+            >
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">النشرة البريدية</h4>
+            <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control bg-transparent w-100 py-3 pe-4 ps-5"
+                type="text"
+                placeholder="بريدك الإلكتروني"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 start-0 mt-2 ms-2"
+                style="
+                  background: var(--secondary);
+                  border: none;
+                  border-radius: 4px;
+                "
+              >
+                اشتراك
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid text-center copyright">
+        <div class="row text-center">
+          <div class="mb-3 mb-md-0">
+            جميع الحقوق محفوظة &copy;
+            <a href="#" class="fs-5"
+              ><span style="color: var(--primary)" class="fw-bold">Power</span>
+              <span style="color: var(--secondary)">Steel Home</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      style="
+        background: var(--primary);
+        border: 1px solid var(--secondary);
+        border-radius: 4px;
+      "
+      ><i class="bi bi-arrow-up" style="color: #fff !important"></i
+    ></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectItems = document.querySelectorAll(".project-item");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // إزالة active و btn-warning من كل الأزرار وإزالة أي style
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("active", "btn-warning");
+              btn.classList.add("btn-outline-warning");
+              btn.style.border = "";
+              btn.style.background = "";
+              btn.style.color = "";
+            });
+            // إضافة active و btn-warning للزر الحالي فقط
+            this.classList.add("active", "btn-warning");
+            this.classList.remove("btn-outline-warning");
+
+            // إذا كان الزر الحالي هو زر الكل
+            if (this.getAttribute("data-filter") === "all") {
+              this.style.background = "var(--secondary)";
+              this.style.color = "#fff";
+              this.style.border = "none";
+            }
+
+            // الفلترة
+            const filterValue = this.getAttribute("data-filter");
+            projectItems.forEach((item) => {
+              if (
+                filterValue === "all" ||
+                item.getAttribute("data-category") === filterValue
+              ) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

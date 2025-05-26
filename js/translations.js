@@ -6,6 +6,7 @@ window.siteTranslations = {
         services: "خدماتنا",
         sections: "الأقسام",
         about: "من نحن",
+        projects: "المشاريع",
         contact: "اتصل بنا",
       },
       footer: {
@@ -25,6 +26,7 @@ window.siteTranslations = {
         home: "Home",
         services: "Services",
         sections: "Sections",
+        projects: "Projects",
         about: "About Us",
         contact: "Contact Us",
       },
