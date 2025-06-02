@@ -980,6 +980,7 @@ i {
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .service-type-card:hover .service-title,
@@ -1098,6 +1099,10 @@ i {
     transform 0.35s cubic-bezier(0.4, 2, 0.6, 1);
   will-change: box-shadow, transform;
   overflow: visible;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .card-service:hover {
   box-shadow: 0 8px 32px 0 var(--secondary), 0 1.5px 8px 0 #ff980055;
@@ -1744,4 +1749,40 @@ i {
 .read-more-btn.active i,
 .read-more-btn i.active {
   transform: rotate(180deg);
+}
+
+/* new */
+[dir="rtl"] .footer .btn.btn-link::before {
+  content: "\f104";
+  margin-left: 10px;
+  margin-right: 0;
+}
+[dir="ltr"] .footer .btn.btn-link::before {
+  content: "\f105";
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+[dir="rtl"] .footer .footer-btn {
+  left: 0;
+  right: auto;
+}
+[dir="ltr"] .footer .footer-btn {
+  right: 0;
+  left: auto;
+}
+
+.row.gx-3 {
+  align-items: stretch !important;
+}
+.col-12.col-md-4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.best-choice-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }

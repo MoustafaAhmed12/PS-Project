@@ -74,7 +74,18 @@
     }
   });
 })(jQuery);
-
+document.addEventListener("DOMContentLoaded", function () {
+  function updateArrowDirection() {
+    const isRTL = document.documentElement.dir === "rtl";
+    document.querySelectorAll(".arrow-dir").forEach((icon) => {
+      icon.classList.remove("fa-arrow-left", "fa-arrow-right");
+      icon.classList.add(isRTL ? "fa-arrow-left" : "fa-arrow-right");
+    });
+  }
+  updateArrowDirection();
+  // لو عندك زر تغيير اللغة
+  document.addEventListener("languageChanged", updateArrowDirection);
+});
 // Translation resources
 // const resources = {
 //   ar: {
